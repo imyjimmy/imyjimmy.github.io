@@ -124,146 +124,148 @@ const Footer = styled.footer`
   }
 `;
 
-const Index = () => (
-  <React.Fragment>
-    <SEO />
-    <Parallax pages={5}>
-      <Divider speed={0.2} offset={0}>
-        <UpDown>
-          {/*<SVG icon="triangle" className={hidden} width={48} stroke={colors.orange} left="10%" top="20%" />*/}
-          {/*<SVG icon="hexa" width={48} stroke={colors.red} left="60%" top="70%" />*/}
-          {/*<SVG icon="box" width={6} fill={colors['grey-darker']} left="60%" top="15%" />*/}
-        </UpDown>
-        <UpDownWide>
-          {/*<SVG icon="arrowUp" className={hidden} width={16} fill={colors['blue-dark']} left="80%" top="10%" />*/}
-          {/*<SVG icon="triangle" width={12} stroke={colors.white} left="90%" top="50%" />*/}
-          {/*<SVG icon="circle" width={16} fill={colors['grey-darker']} left="70%" top="90%" />*/}
-          {/*<SVG icon="triangle" width={16} stroke={colors['grey-darkest']} left="30%" top="65%" />*/}
-          {/*<SVG icon="circle" width={6} fill={colors['grey-darkest']} left="75%" top="10%" />*/}
-          {/*<SVG icon="upDown" className={hidden} width={8} fill={colors['grey-darkest']} left="45%" top="10%" />*/}
-        </UpDownWide>
-        {/*<SVG icon="circle" className={hidden} width={24} fill={colors['grey-darker']} left="5%" top="70%" />*/}
-        {/*<SVG icon="circle" width={6} fill={colors['grey-darkest']} left="4%" top="20%" />*/}
-        {/*<SVG icon="circle" width={12} fill={colors['grey-darkest']} left="50%" top="60%" />*/}
-        {/*<SVG icon="upDown" width={8} fill={colors['grey-darkest']} left="95%" top="90%" />*/}
-        {/*<SVG icon="upDown" className={hidden} width={24} fill={colors['grey-darker']} left="40%" top="80%" />*/}
-        {/*<SVG icon="triangle" width={8} stroke={colors['grey-darker']} left="25%" top="5%" />*/}
-        {/*<SVG icon="circle" width={64} fill={colors.green} left="95%" top="5%" />*/}
-        {/*<SVG icon="box" className={hidden} width={64} fill={colors.purple} left="5%" top="90%" />*/}
-        {/*<SVG icon="box" width={6} fill={colors['grey-darkest']} left="10%" top="10%" />*/}
-        {/*<SVG icon="box" width={12} fill={colors['grey-darkest']} left="40%" top="30%" />*/}
-        {/*<SVG icon="hexa" width={16} stroke={colors['grey-darker']} left="10%" top="50%" />*/}
-        {/*<SVG icon="hexa" width={8} stroke={colors['grey-darker']} left="80%" top="70%" />*/}
-      </Divider>
-      <Content speed={0.4} offset={0}>
-        <Hero>
-          <BigTitle>Jimmy Zhang
-            <br />
-          </BigTitle>
-          <Subtitle>code & comedy</Subtitle>
-        </Hero>
-      </Content>
-      <DividerMiddle
-        bg="linear-gradient(to right, SlateBlue 0%, DeepSkyBlue 100%)"
-        speed={-0.2}
-        offset={1.1}
-        factor={2}
-      />
-      <Content speed={0.4} offset={1.2} factor={2}>
-        Content forthcoming. I swear.
-      </Content>
-      <Divider speed={0.1} offset={1} factor={2}>
-        <UpDown>
-          <SVG icon="box" width={6} fill={colors.white} left="85%" top="75%" />
-          <SVG icon="upDown" width={8} fill={colors.teal} left="70%" top="20%" />
-          <SVG icon="triangle" width={8} stroke={colors.orange} left="25%" top="5%" />
-          <SVG icon="circle" className={hidden} width={24} fill={colors.white} left="17%" top="60%" />
-        </UpDown>
-        <UpDownWide>
-          <SVG icon="arrowUp" className={hidden} width={16} fill={colors.green} left="20%" top="90%" />
-          <SVG icon="triangle" width={12} stroke={colors.white} left="90%" top="30%" />
-          <SVG icon="circle" width={16} fill={colors.yellow} left="70%" top="90%" />
-          <SVG icon="triangle" className={hidden} width={16} stroke={colors.teal} left="18%" top="75%" />
-          <SVG icon="circle" width={6} fill={colors.white} left="75%" top="10%" />
-          <SVG icon="upDown" className={hidden} width={8} fill={colors.green} left="45%" top="10%" />
-        </UpDownWide>
-        <SVG icon="circle" width={6} fill={colors.white} left="4%" top="20%" />
-        <SVG icon="circle" width={12} fill={colors.pink} left="80%" top="60%" />
-        <SVG icon="box" width={6} fill={colors.orange} left="10%" top="10%" />
-        <SVG icon="box" width={12} fill={colors.yellow} left="29%" top="26%" />
-        <SVG icon="hexa" width={16} stroke={colors.red} left="75%" top="30%" />
-        <SVG icon="hexa" width={8} stroke={colors.yellow} left="80%" top="70%" />
-      </Divider>
-      <Divider bg="#23262b" clipPath="polygon(0 16%, 100% 4%, 100% 82%, 0 94%)" speed={0.2} offset={3} />
-      <Divider speed={0.1} offset={3}>
-        <UpDown>
-          <SVG icon="box" className={hidden} width={6} fill={colors.blue} left="50%" top="75%" />
-          <SVG icon="upDown" className={hidden} width={8} fill={colors['grey-darkest']} left="70%" top="20%" />
-          <SVG icon="triangle" width={8} stroke={colors['grey-darkest']} left="25%" top="5%" />
-          <SVG icon="upDown" className={hidden} width={24} fill={colors.orange} left="80%" top="80%" />
-        </UpDown>
-        <UpDownWide>
-          <SVG icon="arrowUp" className={hidden} width={16} fill={colors.purple} left="5%" top="80%" />
-          <SVG icon="triangle" width={12} stroke={colors.white} left="95%" top="50%" />
-          <SVG icon="circle" width={6} fill={colors.white} left="85%" top="15%" />
-          <SVG icon="upDown" className={hidden} width={8} fill={colors['grey-darkest']} left="45%" top="10%" />
-        </UpDownWide>
-        <SVG icon="circle" width={6} fill={colors.white} left="4%" top="20%" />
-        <SVG icon="circle" width={12} fill={colors['grey-darkest']} left="70%" top="60%" />
-        <SVG icon="box" width={6} fill={colors.orange} left="10%" top="10%" />
-        <SVG icon="box" width={12} fill={colors['grey-darkest']} left="20%" top="30%" />
-        <SVG icon="hexa" width={8} stroke={colors['grey-darkest']} left="80%" top="70%" />
-      </Divider>
-      <Content speed={0.4} offset={3}>
+class Index extends React.Component {
+  render () { return (
+    <React.Fragment>
+      <SEO />
+      <Parallax pages={5}>
+        <Divider speed={0.2} offset={0}>
+          <UpDown>
+            {/*<SVG icon="triangle" className={hidden} width={48} stroke={colors.orange} left="10%" top="20%" />*/}
+            {/*<SVG icon="hexa" width={48} stroke={colors.red} left="60%" top="70%" />*/}
+            {/*<SVG icon="box" width={6} fill={colors['grey-darker']} left="60%" top="15%" />*/}
+          </UpDown>
+          <UpDownWide>
+            {/*<SVG icon="arrowUp" className={hidden} width={16} fill={colors['blue-dark']} left="80%" top="10%" />*/}
+            {/*<SVG icon="triangle" width={12} stroke={colors.white} left="90%" top="50%" />*/}
+            {/*<SVG icon="circle" width={16} fill={colors['grey-darker']} left="70%" top="90%" />*/}
+            {/*<SVG icon="triangle" width={16} stroke={colors['grey-darkest']} left="30%" top="65%" />*/}
+            {/*<SVG icon="circle" width={6} fill={colors['grey-darkest']} left="75%" top="10%" />*/}
+            {/*<SVG icon="upDown" className={hidden} width={8} fill={colors['grey-darkest']} left="45%" top="10%" />*/}
+          </UpDownWide>
+          {/*<SVG icon="circle" className={hidden} width={24} fill={colors['grey-darker']} left="5%" top="70%" />*/}
+          {/*<SVG icon="circle" width={6} fill={colors['grey-darkest']} left="4%" top="20%" />*/}
+          {/*<SVG icon="circle" width={12} fill={colors['grey-darkest']} left="50%" top="60%" />*/}
+          {/*<SVG icon="upDown" width={8} fill={colors['grey-darkest']} left="95%" top="90%" />*/}
+          {/*<SVG icon="upDown" className={hidden} width={24} fill={colors['grey-darker']} left="40%" top="80%" />*/}
+          {/*<SVG icon="triangle" width={8} stroke={colors['grey-darker']} left="25%" top="5%" />*/}
+          {/*<SVG icon="circle" width={64} fill={colors.green} left="95%" top="5%" />*/}
+          {/*<SVG icon="box" className={hidden} width={64} fill={colors.purple} left="5%" top="90%" />*/}
+          {/*<SVG icon="box" width={6} fill={colors['grey-darkest']} left="10%" top="10%" />*/}
+          {/*<SVG icon="box" width={12} fill={colors['grey-darkest']} left="40%" top="30%" />*/}
+          {/*<SVG icon="hexa" width={16} stroke={colors['grey-darker']} left="10%" top="50%" />*/}
+          {/*<SVG icon="hexa" width={8} stroke={colors['grey-darker']} left="80%" top="70%" />*/}
+        </Divider>
+        <Content speed={0.4} offset={0}>
+          <Hero>
+            <BigTitle>Jimmy Zhang
+              <br />
+            </BigTitle>
+            <Subtitle>code & comedy</Subtitle>
+          </Hero>
+        </Content>
+        <DividerMiddle
+          bg="#3192BF" //"linear-gradient(to right, DeepSkyBlue 100%, DeepSkyBlue 100%)" //SlateBlue
+          speed={0.2}
+          offset={1.1}
+          factor={2}
+        />
+        <Content speed={0.4} offset={1.2} factor={2}>
+          Content forthcoming. I swear.
+        </Content>
+        <Divider speed={0.1} offset={1} factor={2}>
+          <UpDown>
+            <SVG icon="box" width={6} fill={colors.white} left="85%" top="75%" />
+            <SVG icon="upDown" width={8} fill={colors.teal} left="70%" top="20%" />
+            <SVG icon="triangle" width={8} stroke={colors.orange} left="25%" top="5%" />
+            <SVG icon="circle" className={hidden} width={24} fill={colors.white} left="17%" top="60%" />
+          </UpDown>
+          <UpDownWide>
+            <SVG icon="arrowUp" className={hidden} width={16} fill={colors.green} left="20%" top="90%" />
+            <SVG icon="triangle" width={12} stroke={colors.white} left="90%" top="30%" />
+            <SVG icon="circle" width={16} fill={colors.yellow} left="70%" top="90%" />
+            <SVG icon="triangle" className={hidden} width={16} stroke={colors.teal} left="18%" top="75%" />
+            <SVG icon="circle" width={6} fill={colors.white} left="75%" top="10%" />
+            <SVG icon="upDown" className={hidden} width={8} fill={colors.green} left="45%" top="10%" />
+          </UpDownWide>
+          <SVG icon="circle" width={6} fill={colors.white} left="4%" top="20%" />
+          <SVG icon="circle" width={12} fill={colors.pink} left="80%" top="60%" />
+          <SVG icon="box" width={6} fill={colors.orange} left="10%" top="10%" />
+          <SVG icon="box" width={12} fill={colors.yellow} left="29%" top="26%" />
+          <SVG icon="hexa" width={16} stroke={colors.red} left="75%" top="30%" />
+          <SVG icon="hexa" width={8} stroke={colors.yellow} left="80%" top="70%" />
+        </Divider>
+        <Divider bg="#23262b" clipPath="polygon(0 16%, 100% 4%, 100% 82%, 0 94%)" speed={0.2} offset={3} />
+        <Divider speed={0.1} offset={3}>
+          <UpDown>
+            <SVG icon="box" className={hidden} width={6} fill={colors.blue} left="50%" top="75%" />
+            <SVG icon="upDown" className={hidden} width={8} fill={colors['grey-darkest']} left="70%" top="20%" />
+            <SVG icon="triangle" width={8} stroke={colors['grey-darkest']} left="25%" top="5%" />
+            <SVG icon="upDown" className={hidden} width={24} fill={colors.orange} left="80%" top="80%" />
+          </UpDown>
+          <UpDownWide>
+            <SVG icon="arrowUp" className={hidden} width={16} fill={colors.purple} left="5%" top="80%" />
+            <SVG icon="triangle" width={12} stroke={colors.white} left="95%" top="50%" />
+            <SVG icon="circle" width={6} fill={colors.white} left="85%" top="15%" />
+            <SVG icon="upDown" className={hidden} width={8} fill={colors['grey-darkest']} left="45%" top="10%" />
+          </UpDownWide>
+          <SVG icon="circle" width={6} fill={colors.white} left="4%" top="20%" />
+          <SVG icon="circle" width={12} fill={colors['grey-darkest']} left="70%" top="60%" />
+          <SVG icon="box" width={6} fill={colors.orange} left="10%" top="10%" />
+          <SVG icon="box" width={12} fill={colors['grey-darkest']} left="20%" top="30%" />
+          <SVG icon="hexa" width={8} stroke={colors['grey-darkest']} left="80%" top="70%" />
+        </Divider>
+        <Content speed={0.4} offset={3}>
 
-      </Content>
-      <Divider fill="#23262b" speed={0.2} offset={4}>
-        <WaveWrapper>
-          <InnerWave>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 338.05" preserveAspectRatio="none">
-              <path className={waveAnimation}>
-                <animate
-                  attributeName="d"
-                  values="M 0 100 Q 250 50 400 200 Q 550 350 800 300 L 800 0 L 0 0 L 0 100 Z;M 0 100 Q 200 150 400 200 Q 600 250 800 300 L 800 0 L 0 0 L 0 100 Z;M 0 100 Q 150 350 400 200 Q 650 50 800 300 L 800 0 L 0 0 L 0 100 Z"
-                  repeatCount="indefinite"
-                  dur="30s"
-                />
-              </path>
-            </svg>
-          </InnerWave>
-        </WaveWrapper>
-      </Divider>
-      <Content speed={0.4} offset={4}>
-        <Inner>
-          <Title>Get in touch</Title>
-          <ContactText>
-            Say <a href="mailto:plizNoSp4m@domain.tld">Hi</a> or find me on other platforms:{' '}
-            <a href="https://dribbble.com/LekoArts">Dribbble</a> &{' '}
-            <a href="https://www.instagram.com/lekoarts.de/">Instagram</a>
-          </ContactText>
-        </Inner>
-        <Footer>
-          &copy; 2018 by imyjimmy and totally not ripping off {' '}
-          <a href="https://github.com/LekoArts/gatsby-starter-portfolio-cara">Gatsby Starter Portfolio Cara</a>.
-        </Footer>
-      </Content>
-      <Divider speed={0.1} offset={4}>
-        <UpDown>
-          <SVG icon="upDown" className={hidden} width={8} fill={colors['grey-darkest']} left="70%" top="20%" />
-          <SVG icon="triangle" width={8} stroke={colors['grey-darkest']} left="25%" top="5%" />
-        </UpDown>
-        <UpDownWide>
-          <SVG icon="triangle" width={12} stroke={colors.white} left="95%" top="50%" />
-          <SVG icon="circle" width={6} fill={colors.white} left="85%" top="15%" />
-          <SVG icon="upDown" className={hidden} width={8} fill={colors['grey-darkest']} left="45%" top="10%" />
-        </UpDownWide>
-        <SVG icon="circle" width={6} fill={colors.white} left="4%" top="20%" />
-        <SVG icon="circle" width={12} fill={colors['grey-darkest']} left="70%" top="60%" />
-        <SVG icon="box" width={12} fill={colors['grey-darkest']} left="20%" top="30%" />
-        <SVG icon="hexa" width={8} stroke={colors['grey-darkest']} left="80%" top="70%" />
-      </Divider>
-    </Parallax>
-  </React.Fragment>
-);
+        </Content>
+        <Divider fill="#23262b" speed={0.2} offset={4}>
+          <WaveWrapper>
+            <InnerWave>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 338.05" preserveAspectRatio="none">
+                <path className={waveAnimation}>
+                  <animate
+                    attributeName="d"
+                    values="M 0 100 Q 250 50 400 200 Q 550 350 800 300 L 800 0 L 0 0 L 0 100 Z;M 0 100 Q 200 150 400 200 Q 600 250 800 300 L 800 0 L 0 0 L 0 100 Z;M 0 100 Q 150 350 400 200 Q 650 50 800 300 L 800 0 L 0 0 L 0 100 Z"
+                    repeatCount="indefinite"
+                    dur="30s"
+                  />
+                </path>
+              </svg>
+            </InnerWave>
+          </WaveWrapper>
+        </Divider>
+        <Content speed={0.4} offset={4}>
+          <Inner>
+            <Title>Get in touch</Title>
+            <ContactText>
+              Say <a href="mailto:plizNoSp4m@domain.tld">Hi</a> or find me on other platforms:{' '}
+              <a href="https://dribbble.com/LekoArts">Dribbble</a> &{' '}
+              <a href="https://www.instagram.com/lekoarts.de/">Instagram</a>
+            </ContactText>
+          </Inner>
+          <Footer>
+            &copy; 2018 by imyjimmy and totally not ripping off {' '}
+            <a href="https://github.com/LekoArts/gatsby-starter-portfolio-cara">Gatsby Starter Portfolio Cara</a>.
+          </Footer>
+        </Content>
+        <Divider speed={0.1} offset={4}>
+          <UpDown>
+            <SVG icon="upDown" className={hidden} width={8} fill={colors['grey-darkest']} left="70%" top="20%" />
+            <SVG icon="triangle" width={8} stroke={colors['grey-darkest']} left="25%" top="5%" />
+          </UpDown>
+          <UpDownWide>
+            <SVG icon="triangle" width={12} stroke={colors.white} left="95%" top="50%" />
+            <SVG icon="circle" width={6} fill={colors.white} left="85%" top="15%" />
+            <SVG icon="upDown" className={hidden} width={8} fill={colors['grey-darkest']} left="45%" top="10%" />
+          </UpDownWide>
+          <SVG icon="circle" width={6} fill={colors.white} left="4%" top="20%" />
+          <SVG icon="circle" width={12} fill={colors['grey-darkest']} left="70%" top="60%" />
+          <SVG icon="box" width={12} fill={colors['grey-darkest']} left="20%" top="30%" />
+          <SVG icon="hexa" width={8} stroke={colors['grey-darkest']} left="80%" top="70%" />
+        </Divider>
+      </Parallax>
+    </React.Fragment>
+  )}
+}
 
 export default Index;
