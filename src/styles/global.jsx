@@ -8,8 +8,8 @@ injectGlobal`
   html {
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
+    overflow-y: hidden;
     box-sizing: border-box;
-    -ms-overflow-style: scrollbar;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     background-color: #161719;
     -webkit-font-smoothing: antialiased;
@@ -22,3 +22,5 @@ injectGlobal`
     padding: 0;
   }
 `;
+
+/*     -ms-overflow-style: scrollbar; */
