@@ -1,7 +1,7 @@
 /* global tw */
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components'; //'react-emotion';
+import styled from 'react-emotion'; //'styled-components'; //'react-emotion';
 import { Layout, Article, Wrapper, Button, SectionTitle } from 'components';
 import { media } from '../utils/media';
 
@@ -192,7 +192,7 @@ const Index = ({
         factor={2}
       />
       <Content speed={0.4} offset={1.2} factor={2}>
-      <Layout>
+        <Layout>
         {postEdges.map(post => (
             <Article
               title={post.node.frontmatter.title}
