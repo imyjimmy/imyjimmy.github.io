@@ -18,14 +18,7 @@ import triangle from '../images/triangle.svg';
 import avatar from '../images/avatar.jpg';
 import '../styles/global';
 
-const Divider = styled(ParallaxLayer)`
-  ${tw('absolute w-full h-full')};
-  background: ${props => props.bg};
-  svg {
-    fill: ${props => props.fill};
-  }
-  clip-path: ${props => props.clipPath};
-`;
+import Divider from '../components/parallax/Divider';
 
 const DividerMiddle = styled(Divider)`
   clip-path: polygon(0 15%, 100% 25%, 100% 85%, 0 75%);

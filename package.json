@@ -6,7 +6,7 @@
   "license": "MIT",
   "dependencies": {
     "babel-plugin-styled-components": "^1.8.0",
-    "babel-plugin-tailwind": "^0.2.00",
+    "babel-plugin-tailwind": "^0.1.10",
     "emotion": "^9.2.12",
     "emotion-server": "^9.2.12",
     "gatsby": "^2.0.35",
