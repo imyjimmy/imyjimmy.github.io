@@ -150,33 +150,7 @@ const Index = ({
   <React.Fragment>
     <SEO />
     <Parallax pages={5}>
-      <Divider speed={0.2} offset={0}>
-        <UpDown>
-          {/*<SVG icon="triangle" className={hidden} width={48} stroke={colors.orange} left="10%" top="20%" />*/}
-          {/*<SVG icon="hexa" width={48} stroke={colors.red} left="60%" top="70%" />*/}
-          {/*<SVG icon="box" width={6} fill={colors['grey-darker']} left="60%" top="15%" />*/}
-        </UpDown>
-        <UpDownWide>
-          {/*<SVG icon="arrowUp" className={hidden} width={16} fill={colors['blue-dark']} left="80%" top="10%" />*/}
-          {/*<SVG icon="triangle" width={12} stroke={colors.white} left="90%" top="50%" />*/}
-          {/*<SVG icon="circle" width={16} fill={colors['grey-darker']} left="70%" top="90%" />*/}
-          {/*<SVG icon="triangle" width={16} stroke={colors['grey-darkest']} left="30%" top="65%" />*/}
-          {/*<SVG icon="circle" width={6} fill={colors['grey-darkest']} left="75%" top="10%" />*/}
-          {/*<SVG icon="upDown" className={hidden} width={8} fill={colors['grey-darkest']} left="45%" top="10%" />*/}
-        </UpDownWide>
-        {/*<SVG icon="circle" className={hidden} width={24} fill={colors['grey-darker']} left="5%" top="70%" />*/}
-        {/*<SVG icon="circle" width={6} fill={colors['grey-darkest']} left="4%" top="20%" />*/}
-        {/*<SVG icon="circle" width={12} fill={colors['grey-darkest']} left="50%" top="60%" />*/}
-        {/*<SVG icon="upDown" width={8} fill={colors['grey-darkest']} left="95%" top="90%" />*/}
-        {/*<SVG icon="upDown" className={hidden} width={24} fill={colors['grey-darker']} left="40%" top="80%" />*/}
-        {/*<SVG icon="triangle" width={8} stroke={colors['grey-darker']} left="25%" top="5%" />*/}
-        {/*<SVG icon="circle" width={64} fill={colors.green} left="95%" top="5%" />*/}
-        {/*<SVG icon="box" className={hidden} width={64} fill={colors.purple} left="5%" top="90%" />*/}
-        {/*<SVG icon="box" width={6} fill={colors['grey-darkest']} left="10%" top="10%" />*/}
-        {/*<SVG icon="box" width={12} fill={colors['grey-darkest']} left="40%" top="30%" />*/}
-        {/*<SVG icon="hexa" width={16} stroke={colors['grey-darker']} left="10%" top="50%" />*/}
-        {/*<SVG icon="hexa" width={8} stroke={colors['grey-darker']} left="80%" top="70%" />*/}
-      </Divider>
+
       <Content speed={0.4} offset={0}>
         <Hero>
           <BigTitle>Jimmy Zhang
@@ -205,82 +179,9 @@ const Index = ({
             />
           ))}
         </Layout>
-{/*        <Inner>
-          <Title>Projects</Title>
-          <ProjectsWrapper>
-            <ProjectCard
-              title="Freiheit"
-              link="https://www.behance.net/gallery/58937147/Freiheit"
-              bg="linear-gradient(to right, #D4145A 0%, #FBB03B 100%)"
-            >
-              This project is my entry to Adobe's #ChallengeYourPerspective contest.
-            </ProjectCard>
-            <ProjectCard
-              title="Harry Potter"
-              link="https://www.behance.net/gallery/52915793/Harry-Potter"
-              bg="linear-gradient(to right, #662D8C 0%, #ED1E79 100%)"
-            >
-              I entered the DOCMA 2017 award with this Harry Potter inspired image.
-            </ProjectCard>
-            <ProjectCard
-              title="Tomb Raider"
-              link="https://www.behance.net/gallery/43907099/Tomb-Raider"
-              bg="linear-gradient(to right, #009245 0%, #FCEE21 100%)"
-            >
-              Recreation of a Tomb Raider Wallpaper (Fan Art)
-            </ProjectCard>
-            <ProjectCard
-              title="Eagle"
-              link="https://www.behance.net/gallery/38068151/Eagle"
-              bg="linear-gradient(to right, #D585FF 0%, #00FFEE 100%)"
-            >
-              A fantasy image manipulation relocating the habitat of wild animals.
-            </ProjectCard>
-          </ProjectsWrapper>
-        </Inner>*/}
       </Content>
-      <Divider speed={0.1} offset={1} factor={2}>
-        <UpDown>
-          <SVG icon="box" width={6} fill={colors.white} left="85%" top="75%" />
-          <SVG icon="upDown" width={8} fill={colors.teal} left="70%" top="20%" />
-          <SVG icon="triangle" width={8} stroke={colors.orange} left="25%" top="5%" />
-          <SVG icon="circle" className={hidden} width={24} fill={colors.white} left="17%" top="60%" />
-        </UpDown>
-        <UpDownWide>
-          <SVG icon="arrowUp" className={hidden} width={16} fill={colors.green} left="20%" top="90%" />
-          <SVG icon="triangle" width={12} stroke={colors.white} left="90%" top="30%" />
-          <SVG icon="circle" width={16} fill={colors.yellow} left="70%" top="90%" />
-          <SVG icon="triangle" className={hidden} width={16} stroke={colors.teal} left="18%" top="75%" />
-          <SVG icon="circle" width={6} fill={colors.white} left="75%" top="10%" />
-          <SVG icon="upDown" className={hidden} width={8} fill={colors.green} left="45%" top="10%" />
-        </UpDownWide>
-        <SVG icon="circle" width={6} fill={colors.white} left="4%" top="20%" />
-        <SVG icon="circle" width={12} fill={colors.pink} left="80%" top="60%" />
-        <SVG icon="box" width={6} fill={colors.orange} left="10%" top="10%" />
-        <SVG icon="box" width={12} fill={colors.yellow} left="29%" top="26%" />
-        <SVG icon="hexa" width={16} stroke={colors.red} left="75%" top="30%" />
-        <SVG icon="hexa" width={8} stroke={colors.yellow} left="80%" top="70%" />
-      </Divider>
       <Divider bg="#23262b" clipPath="polygon(0 16%, 100% 4%, 100% 82%, 0 94%)" speed={0.2} offset={3} />
-      <Divider speed={0.1} offset={3}>
-        <UpDown>
-          <SVG icon="box" className={hidden} width={6} fill={colors.blue} left="50%" top="75%" />
-          <SVG icon="upDown" className={hidden} width={8} fill={colors['grey-darkest']} left="70%" top="20%" />
-          <SVG icon="triangle" width={8} stroke={colors['grey-darkest']} left="25%" top="5%" />
-          <SVG icon="upDown" className={hidden} width={24} fill={colors.orange} left="80%" top="80%" />
-        </UpDown>
-        <UpDownWide>
-          <SVG icon="arrowUp" className={hidden} width={16} fill={colors.purple} left="5%" top="80%" />
-          <SVG icon="triangle" width={12} stroke={colors.white} left="95%" top="50%" />
-          <SVG icon="circle" width={6} fill={colors.white} left="85%" top="15%" />
-          <SVG icon="upDown" className={hidden} width={8} fill={colors['grey-darkest']} left="45%" top="10%" />
-        </UpDownWide>
-        <SVG icon="circle" width={6} fill={colors.white} left="4%" top="20%" />
-        <SVG icon="circle" width={12} fill={colors['grey-darkest']} left="70%" top="60%" />
-        <SVG icon="box" width={6} fill={colors.orange} left="10%" top="10%" />
-        <SVG icon="box" width={12} fill={colors['grey-darkest']} left="20%" top="30%" />
-        <SVG icon="hexa" width={8} stroke={colors['grey-darkest']} left="80%" top="70%" />
-      </Divider>
+
       <Content speed={0.4} offset={3}>
 
       </Content>
@@ -314,21 +215,7 @@ const Index = ({
           <a href="https://github.com/LekoArts/gatsby-starter-portfolio-cara">Github Repository</a>.
         </Footer>
       </Content>
-      <Divider speed={0.1} offset={4}>
-        <UpDown>
-          <SVG icon="upDown" className={hidden} width={8} fill={colors['grey-darkest']} left="70%" top="20%" />
-          <SVG icon="triangle" width={8} stroke={colors['grey-darkest']} left="25%" top="5%" />
-        </UpDown>
-        <UpDownWide>
-          <SVG icon="triangle" width={12} stroke={colors.white} left="95%" top="50%" />
-          <SVG icon="circle" width={6} fill={colors.white} left="85%" top="15%" />
-          <SVG icon="upDown" className={hidden} width={8} fill={colors['grey-darkest']} left="45%" top="10%" />
-        </UpDownWide>
-        <SVG icon="circle" width={6} fill={colors.white} left="4%" top="20%" />
-        <SVG icon="circle" width={12} fill={colors['grey-darkest']} left="70%" top="60%" />
-        <SVG icon="box" width={12} fill={colors['grey-darkest']} left="20%" top="30%" />
-        <SVG icon="hexa" width={8} stroke={colors['grey-darkest']} left="80%" top="70%" />
-      </Divider>
+
     </Parallax>
   </React.Fragment>
 );
