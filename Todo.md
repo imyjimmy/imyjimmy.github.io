@@ -6,3 +6,28 @@
 * tear down existing parallax structure, create a new simpler structure
 
 
+## Site Structure
+==== Parallax ===
+
+Landing Area
+
+
+==== Divider ====
+
+Software Projects
+
+
+==== Divider ====
+
+Comedy Shows
+
+==== Divider ====
+
+Blog (filter by: comedy, software, life)
+
+
+==== Divider ====
+
+Contect
+
+==== Parallax ===
