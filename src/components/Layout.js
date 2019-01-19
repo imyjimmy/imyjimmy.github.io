@@ -73,7 +73,7 @@ const Layout = ({ children }) => (
     query={graphql`
       query LayoutQuery {
         site {
-          buildTime(formatString: "DD.MM.YYYY")
+          buildTime(formatString: "MM.DD.YYYY")
         }
       }
     `}
@@ -83,11 +83,6 @@ const Layout = ({ children }) => (
           <SEO />
           <GlobalStyle />
           {children}
-          <Footer>
-            &copy; 2018 by John Doe. All rights reserved. <br />
-            <a href="https://github.com/LekoArts/gatsby-starter-minimal-blog">GitHub Repository</a> <br />
-            <span>Last build: {data.site.buildTime}</span>
-          </Footer>
         </React.Fragment>
       </ThemeProvider>
     )}
