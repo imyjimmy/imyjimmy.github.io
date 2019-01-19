@@ -87,8 +87,8 @@ IndexPage.propTypes = {
   }).isRequired,
 };
 
-export const IndexQuery = graphql`
-  query IndexQuery {
+export const IndexQ = graphql`
+  query IndexQ {
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
