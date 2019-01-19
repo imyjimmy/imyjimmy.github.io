@@ -9,14 +9,44 @@
 /sw.js
   Cache-Control: no-cache
 /offline-plugin-app-shell-fallback/
-  Link: </webpack-runtime-cc8aff7813862b76f71e.js>; rel=preload; as=script
-  Link: </component---node-modules-gatsby-plugin-offline-app-shell-js-7fb03748f6b5c94581e7.js>; rel=preload; as=script
-/HelloWorld/
-  Link: </webpack-runtime-cc8aff7813862b76f71e.js>; rel=preload; as=script
-  Link: </0-56bd3ce240b5e57ae20c.js>; rel=preload; as=script
-/comedy/
-  Link: </webpack-runtime-cc8aff7813862b76f71e.js>; rel=preload; as=script
-  Link: </0-56bd3ce240b5e57ae20c.js>; rel=preload; as=script
+  Link: </webpack-runtime-49ec37c7a7b01cca13b0.js>; rel=preload; as=script
+  Link: </component---node-modules-gatsby-plugin-offline-app-shell-js-48d6b49fb02339145f55.js>; rel=preload; as=script
+/coding-is-fun
+  Link: </webpack-runtime-49ec37c7a7b01cca13b0.js>; rel=preload; as=script
+  Link: </0-6880bebd95ce615a005e.js>; rel=preload; as=script
+/scittle-luo
+  Link: </webpack-runtime-49ec37c7a7b01cca13b0.js>; rel=preload; as=script
+  Link: </0-6880bebd95ce615a005e.js>; rel=preload; as=script
+/xylophonmusik
+  Link: </webpack-runtime-49ec37c7a7b01cca13b0.js>; rel=preload; as=script
+  Link: </0-6880bebd95ce615a005e.js>; rel=preload; as=script
+/jux-bei-pforzheim
+  Link: </webpack-runtime-49ec37c7a7b01cca13b0.js>; rel=preload; as=script
+  Link: </0-6880bebd95ce615a005e.js>; rel=preload; as=script
+/alper-musig-clare
+  Link: </webpack-runtime-49ec37c7a7b01cca13b0.js>; rel=preload; as=script
+  Link: </0-6880bebd95ce615a005e.js>; rel=preload; as=script
+/categories/coding
+  Link: </webpack-runtime-49ec37c7a7b01cca13b0.js>; rel=preload; as=script
+  Link: </0-6880bebd95ce615a005e.js>; rel=preload; as=script
+/categories/general
+  Link: </webpack-runtime-49ec37c7a7b01cca13b0.js>; rel=preload; as=script
+  Link: </0-6880bebd95ce615a005e.js>; rel=preload; as=script
+/categories/music
+  Link: </webpack-runtime-49ec37c7a7b01cca13b0.js>; rel=preload; as=script
+  Link: </0-6880bebd95ce615a005e.js>; rel=preload; as=script
+/categories/technology
+  Link: </webpack-runtime-49ec37c7a7b01cca13b0.js>; rel=preload; as=script
+  Link: </0-6880bebd95ce615a005e.js>; rel=preload; as=script
+/categories/
+  Link: </webpack-runtime-49ec37c7a7b01cca13b0.js>; rel=preload; as=script
+  Link: </0-6880bebd95ce615a005e.js>; rel=preload; as=script
+/contact/
+  Link: </webpack-runtime-49ec37c7a7b01cca13b0.js>; rel=preload; as=script
+  Link: </0-6880bebd95ce615a005e.js>; rel=preload; as=script
 /
-  Link: </webpack-runtime-cc8aff7813862b76f71e.js>; rel=preload; as=script
-  Link: </0-56bd3ce240b5e57ae20c.js>; rel=preload; as=script
+  Link: </webpack-runtime-49ec37c7a7b01cca13b0.js>; rel=preload; as=script
+  Link: </0-6880bebd95ce615a005e.js>; rel=preload; as=script
+/success/
+  Link: </webpack-runtime-49ec37c7a7b01cca13b0.js>; rel=preload; as=script
+  Link: </0-6880bebd95ce615a005e.js>; rel=preload; as=script
