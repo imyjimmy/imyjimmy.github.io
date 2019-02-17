@@ -20,6 +20,11 @@ const typography = new Typography({
       styles: ['400'],
     },
   ],
+  overrideStyles: () => ({
+    html: {
+      overflowY: 'none',
+    },
+  }),
 });
 
 // Hot reload typography in development.
