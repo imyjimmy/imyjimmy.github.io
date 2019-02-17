@@ -72,7 +72,7 @@ const Title = styled.h1`
 `;
 
 const Subtitle = styled.p`
-  ${tw('text-2xl lg:text-4xl font-sans text-white mt-8 xxl:w-3/4')};
+  ${tw('text-2xl lg:text-3xl font-sans text-white mt-8 xxl:w-3/4')};
   text-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
 `;
 
@@ -144,12 +144,12 @@ const Index = ({
     {/*<SEO />*/}
     <Parallax pages={5}>
 
-      <Content id="heymom" speed={0.4} offset={0}>
+      <Content speed={0.4} offset={0}>
         <Hero>
           <BigTitle>Jimmy Zhang
             <br />
           </BigTitle>
-          <Subtitle>code & comedy</Subtitle>
+          <Subtitle>I write code & perform stand up comedy.</Subtitle>
         </Hero>
       </Content>
       {/*<Divider
@@ -159,30 +159,14 @@ const Index = ({
         offset={1.1}
         factor={2}
       />*/}
-      <ParallaxLayer speed={0.4} offset={1} factor={1} style={{ backgroundColor: '#222222' }}>
-        <Layout>
-          <Inner>
-            <Title>Blog</Title>
-          </Inner>
-        {postEdges.map(post => (
-            <Article
-              title={post.node.frontmatter.title}
-              date={post.node.frontmatter.date}
-              excerpt={post.node.excerpt}
-              timeToRead={post.node.timeToRead}
-              slug={post.node.fields.slug}
-              category={post.node.frontmatter.category}
-              key={post.node.fields.slug}
-            />
-          ))}
-        </Layout>
-      </ParallaxLayer>
-      <Divider bg="#FF0000" clipPath="polygon(0 16%, 100% 4%, 100% 82%, 0 94%)" speed={0.2} offset={3} />
-
-      <Content speed={0.4} offset={3}>
-
+      <Content speed={0.6} offset={.8}>
+        <Inner>
+          <Title>Content Forthcoming.</Title>
+          <ContactText>
+            In the meantime, enjoy this bare-bones web experience.
+          </ContactText>
+        </Inner>
       </Content>
-
       <Content speed={0.4} offset={4}>
         <Inner>
           <Title>Get in touch</Title>
