@@ -159,7 +159,7 @@ const Index = ({
         offset={1.1}
         factor={2}
       />*/}
-      <Content speed={0.6} offset={.8}>
+      <Content speed={0.6} offset={1}>
         <Inner>
           <Title>Content Forthcoming.</Title>
           <ContactText>
