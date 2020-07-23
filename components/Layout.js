@@ -14,18 +14,18 @@ export default function Layout({ children }) {
       </Link>
     </h1>
   ) : (
-    <h1 className="mb-2">
-      <Link href="/">
-        <a className="text-2xl font-black text-black no-underline">
-          Next.Js Starter Blog
+      <h1 className="mb-2">
+        <Link href="/">
+          <a className="text-2xl font-black text-black no-underline">
+            Next.Js Starter Blog
         </a>
-      </Link>
-    </h1>
-  );
+        </Link>
+      </h1>
+    );
 
   return (
     <div className="max-w-screen-sm px-4 py-8 mx-auto">
-      <header>{header}</header>
+      {/* <header>{header}</header> */}
       <main>{children}</main>
       <footer>
         © {new Date().getFullYear()}, Built with{" "}

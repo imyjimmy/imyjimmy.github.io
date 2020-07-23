@@ -15,6 +15,6 @@ module.exports = {
         "cssPropOptimization": true
       }
     ],
-    ["macros"],
+    ["macros"], //tailwind macro that allows 'tw'
   ]
 };

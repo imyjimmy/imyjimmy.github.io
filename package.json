@@ -13,6 +13,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.10",
     "@emotion/styled": "^10.0.10",
+    "autoprefixer": "^9.8.5",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-optipng": "^8.0.0",
     "lazysizes": "^5.2.2",
@@ -20,8 +21,7 @@
     "next": "9.4.4",
     "next-compose-plugins": "^2.2.0",
     "next-optimized-images": "^2.6.1",
-    "postcss": "^7.0.32",
-    "postcss-cli": "^6.0.1",
+    "postcss-import": "^12.0.1",
     "postcss-preset-env": "^6.7.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
@@ -29,17 +29,17 @@
     "react-syntax-highlighter": "^12.2.1",
     "react-typography": "^0.16.19",
     "styled-components": "^5.1.1",
+    "tailwindcss": "^1.5.2",
     "typeface-merriweather": "^0.0.72",
     "typeface-open-sans": "^0.0.75",
     "typography": "^0.16.19",
     "typography-theme-sutro": "^0.16.19"
   },
   "devDependencies": {
-    "gray-matter": "^4.0.2",
     "babel-plugin-emotion": "^10.0.9",
     "babel-plugin-macros": "^2.5.1",
-    "tailwind.macro": "^1.0.0-alpha.2",
-    "tailwindcss": "^1.0.0-beta.8"
+    "gray-matter": "^4.0.2",
+    "tailwind.macro": "^1.0.0-alpha.2"
   },
   "resolutions": {
     "styled-components": "^5"
