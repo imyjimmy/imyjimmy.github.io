@@ -2,5 +2,8 @@
   "workbench.colorCustomizations": {
     "titleBar.activeBackground": "#0074D9",
     "titleBar.inactiveBackground": "#001f3f"
+  },
+  "search.exclude": {
+    "**/node_modules": false
   }
 }
