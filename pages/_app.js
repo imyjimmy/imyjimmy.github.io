@@ -1,5 +1,3 @@
-import "styles/tailwind.css";
-
 import "typeface-open-sans";
 import "typeface-merriweather";
 

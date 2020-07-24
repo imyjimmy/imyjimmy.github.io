@@ -1,9 +1,9 @@
 export default {
   siteMetadata: {
-    title: "Next.js Starter Blog",
+    title: "Jimmy Zhang",
     author: {
-      name: "Jose Felix",
-      summary: "who works building clean user interfaces with React.",
+      name: "Jimmy Zhang",
+      summary: "I write code and perform standup comedy",
     },
     description: "A blog created with Next.js and Tailwind.css",
     siteUrl: "https://nextjs-starter-blog-demo.netlify.app/",

@@ -31,9 +31,7 @@
     "typography-theme-sutro": "^0.16.19"
   },
   "devDependencies": {
-    "babel-plugin-tailwind-components": "^0.5.10",
-    "gray-matter": "^4.0.2",
-    "tailwindcss": "^1.5.2"
+    "gray-matter": "^4.0.2"
   },
   "resolutions": {
     "styled-components": "^5"
