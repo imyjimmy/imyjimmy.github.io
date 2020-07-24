@@ -8,8 +8,7 @@ SutroTheme.overrideThemeStyles = ({ rhythm }, options) => ({
     marginTop: rhythm(1 / 2),
   },
   h1: {
-    fontWeight: 900,
-    letterSpacing: "-1px",
+    fontWeight: 700,
   },
 });
 SutroTheme.scaleRatio = 5 / 2;

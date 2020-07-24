@@ -24,7 +24,7 @@ export default function Layout({ children }) {
     );
 
   return (
-    <div className="max-w-screen-sm px-4 py-8 mx-auto">
+    <div id='hey-mom' className="max-w-screen-sm px-4 py-8 mx-auto">
       {/* <header>{header}</header> */}
       <main>{children}</main>
       <footer>
