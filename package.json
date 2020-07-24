@@ -26,6 +26,7 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-markdown": "^4.3.1",
+    "react-spring": "^8.0.27",
     "react-syntax-highlighter": "^12.2.1",
     "react-typography": "^0.16.19",
     "styled-components": "^5.1.1",
@@ -36,8 +37,8 @@
     "babel-plugin-styled-components": "^1.10.7",
     "gray-matter": "^4.0.2",
     "typeface-cantata-one": "^0.0.54",
-    "typeface-open-sans": "^0.0.75",
-    "typeface-merriweather": "^0.0.72"
+    "typeface-merriweather": "^0.0.72",
+    "typeface-open-sans": "^0.0.75"
   },
   "resolutions": {
     "styled-components": "^5"
