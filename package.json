@@ -36,10 +36,10 @@
     "typography-theme-sutro": "^0.16.19"
   },
   "devDependencies": {
-    "babel-plugin-emotion": "^10.0.9",
-    "babel-plugin-macros": "^2.5.1",
+    "babel-plugin-styled-components": "^1.10.7",
     "gray-matter": "^4.0.2",
-    "tailwind.macro": "^1.0.0-alpha.2"
+    "typeface-cantata-one": "^0.0.54",
+    "typeface-open-sans": "^0.0.54"
   },
   "resolutions": {
     "styled-components": "^5"

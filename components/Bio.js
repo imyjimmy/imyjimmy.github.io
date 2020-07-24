@@ -1,21 +1,39 @@
 import Image from "./Image";
 import styled from 'styled-components'
-import tw from 'tailwind.macro'
 
 import { getSiteMetaData } from "utils/helpers";
 
 const Hero = styled.div`
-  ${tw('w-full xl:w-2/3')};
+  width: 100%;
+  
 `;
 
 const BigTitle = styled.h1`
-  ${tw('text-5xl lg:text-6xl font-serif text-white mb-6 tracking-wide')};
+  font-family: 'Cantata One', Constantia, "Lucida Bright";
+  font-size: 90px;
+  
+  letter-spacing: 0.05em;
+  line-height: 99px;
   text-shadow: 0 5px 35px rgba(255, 255, 255, 0.15);
+
+  display: block;
+  margin-bottom: 1.5rem;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 `;
 
 const Subtitle = styled.p`
-  ${tw('text-2xl lg:text-3xl font-sans text-white mt-8 xxl:w-3/4')};
+  font-family: "Open Sans", BlinkMacSystemFont, "Segoe UI", Roboto;
+  font-size: 1.875rem;
   text-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+  margin-top: 2rem;
+  margin-bottom: 1.67rem;
+
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 `;
 
 export default function Bio() {
@@ -23,10 +41,14 @@ export default function Bio() {
 
   return (
     <Hero>
-      <BigTitle>Jimmy Zhang
-    <br />
-      </BigTitle>
-      <Subtitle>I write code and perform stand up comedy</Subtitle>
+      <BigTitle>Jimmy Zhang</BigTitle>
+      <Subtitle>I write code & perform standup comedy</Subtitle>
     </Hero>
+    // <Hero>
+    //   <BigTitle>Jimmy Zhang
+    // <br />
+    //   </BigTitle>
+    //   <Subtitle>I write code and perform stand up comedy</Subtitle>
+    // </Hero>
   );
 }
