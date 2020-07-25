@@ -12,7 +12,6 @@ const CustomParallaxLayer = ({ className, children, ...rest }) => {
 }
 
 const Parallax = styled(CustomParallax)`
-  // margin: 0 10% 0;
 `;
 
 const ParallaxLayer = styled(CustomParallaxLayer)`
