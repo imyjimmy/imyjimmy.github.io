@@ -10,6 +10,9 @@ SutroTheme.overrideThemeStyles = ({ rhythm }, options) => ({
   h1: {
     fontWeight: 700,
   },
+  html: {
+    overflowY: 'initial',
+  }
 });
 SutroTheme.scaleRatio = 5 / 2;
 

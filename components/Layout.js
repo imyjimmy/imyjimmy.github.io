@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import styled from 'styled-components';
 
-export default function Layout({ className, children }) {
+function Layout({ className, children }) {
   const { pathname } = useRouter();
   const isRoot = pathname === "/";
 
@@ -24,9 +25,17 @@ export default function Layout({ className, children }) {
     );
 
   return (
-    <div id='hey-mom' className={className + " max-w-screen-sm px-4 py-8 mx-auto"}>
+    <div className={className + " max-w-screen-sm px-4 py-8 mx-auto"}>
       {/* <header>{header}</header> */}
       <main>{children}</main>
     </div>
   );
 }
+
+const LayoutTheme = styled(Layout)`
+  background-color: ${ props => props.theme.backgroundColor};
+  color: ${ props => props.theme.textColor};
+  font-family: ${ props => props.theme.fontFamily};
+`;
+
+export { Layout, LayoutTheme }
