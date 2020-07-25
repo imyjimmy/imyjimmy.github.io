@@ -10,6 +10,7 @@ import styled from 'styled-components';
 
 import { Parallax, ParallaxLayer } from 'react-spring/addons.cjs';
 
+
 const theme = {
   textColor: '#EEE',
   fontFamily: 'Cantata One',
@@ -22,7 +23,7 @@ const LayoutTheme = styled(Layout)`
   font-family: ${ props => props.theme.fontFamily};
 `;
 
-const StyledLink = styled(Link)`
+const StyledLink = styled.a`
   color: ${ props => props.theme.textColor};
 `;
 
@@ -40,9 +41,9 @@ export default function Home({ posts }) {
               <article key={slug}>
                 <header>
                   <h3 className="mb-2">
-                    <StyledLink href={"/post/[slug]"} as={`/ post / ${slug} `}>
-                      <a className="text-3xl text-orange-600 no-underline">{title}</a>
-                    </StyledLink>
+                    <Link href={"/post/[slug]"} as={`/ post / ${slug} `} passHref>
+                      <StyledLink className="text-3xl text-orange-600 no-underline">{title}</StyledLink>
+                    </Link>
                   </h3>
                   <span className="mb-4 text-xs">{date}</span>
                 </header>
