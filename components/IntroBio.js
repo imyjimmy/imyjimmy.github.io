@@ -5,7 +5,7 @@ import { getSiteMetaData } from "utils/helpers";
 
 const Hero = styled.div`
   width: 100%;
-  
+  padding-top: 25%;
 `;
 
 const BigTitle = styled.h1`
@@ -36,7 +36,7 @@ const Subtitle = styled.p`
   margin-inline-end: 0px;
 `;
 
-export default function Bio() {
+export default function IntroBio() {
   const { author, social } = getSiteMetaData();
 
   return (
@@ -44,11 +44,5 @@ export default function Bio() {
       <BigTitle>Jimmy Zhang</BigTitle>
       <Subtitle>I write code & perform standup comedy</Subtitle>
     </Hero>
-    // <Hero>
-    //   <BigTitle>Jimmy Zhang
-    // <br />
-    //   </BigTitle>
-    //   <Subtitle>I write code and perform stand up comedy</Subtitle>
-    // </Hero>
   );
 }

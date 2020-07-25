@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import Layout from "components/Layout";
-import Bio from "components/Bio";
+import IntroBio from "components/IntroBio";
 import SEO from "components/Seo";
 import { getSortedPosts } from "utils/posts";
 
@@ -20,7 +20,6 @@ const LayoutTheme = styled(Layout)`
   background-color: ${ props => props.theme.backgroundColor};
   color: ${ props => props.theme.textColor};
   font-family: ${ props => props.theme.fontFamily};
-  padding-top: 10%;
 `;
 
 
@@ -31,7 +30,7 @@ export default function Home({ posts }) {
         <SEO title="All posts" />
         <Parallax pages={3} scrolling={true}>
           <ParallaxLayer offset={0}>
-            <Bio />
+            <IntroBio />
           </ParallaxLayer>
           <ParallaxLayer offset={1}>
             {posts.map(({ frontmatter: { title, description, date }, slug }) => (
