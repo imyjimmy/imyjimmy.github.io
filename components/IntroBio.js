@@ -42,7 +42,7 @@ export default function IntroBio() {
   return (
     <Hero>
       <BigTitle>Jimmy Zhang</BigTitle>
-      <Subtitle>I write code & perform standup comedy</Subtitle>
+      <Subtitle>Expert React Developer with an 👁 for Design</Subtitle>
     </Hero>
   );
 }
