@@ -8,14 +8,19 @@ import { getSortedPosts } from "utils/posts";
 import { ThemeProvider } from 'styled-components';
 import styled from 'styled-components';
 
+import { Parallax, ParallaxLayer } from 'react-spring/addons.cjs';
+
 const theme = {
   textColor: '#EEE',
-  fontFamily: 'Cantata One'
+  fontFamily: 'Cantata One',
+  backgroundColor: '#1E1E1E'
 }
 
-const LayoutTheme = styled.div`
+const LayoutTheme = styled(Layout)`
+  background-color: ${ props => props.theme.backgroundColor};
   color: ${ props => props.theme.textColor};
   font-family: ${ props => props.theme.fontFamily};
+  padding-top: 10%;
 `;
 
 
@@ -24,22 +29,34 @@ export default function Home({ posts }) {
     <ThemeProvider theme={theme} >
       <LayoutTheme>
         <SEO title="All posts" />
-        <Bio />
-        {posts.map(({ frontmatter: { title, description, date }, slug }) => (
-          <article key={slug}>
-            <header>
-              <h3 className="mb-2">
-                <Link href={"/post/[slug]"} as={`/post/${slug}`}>
-                  <a className="text-3xl text-orange-600 no-underline">{title}</a>
-                </Link>
-              </h3>
-              <span className="mb-4 text-xs">{date}</span>
-            </header>
-            <section>
-              <p className="mb-8">{description}</p>
-            </section>
-          </article>
-        ))}
+        <Parallax pages={3} scrolling={true}>
+          <ParallaxLayer offset={0}>
+            <Bio />
+          </ParallaxLayer>
+          <ParallaxLayer offset={1}>
+            {posts.map(({ frontmatter: { title, description, date }, slug }) => (
+              <article key={slug}>
+                <header>
+                  <h3 className="mb-2">
+                    <Link href={"/post/[slug]"} as={`/ post / ${slug} `}>
+                      <a className="text-3xl text-orange-600 no-underline">{title}</a>
+                    </Link>
+                  </h3>
+                  <span className="mb-4 text-xs">{date}</span>
+                </header>
+                <section>
+                  <p className="mb-8">{description}</p>
+                </section>
+              </article>
+            ))}
+          </ParallaxLayer>
+          <ParallaxLayer offset={2}>
+            <footer>
+              © {new Date().getFullYear()}, Built with{" "}
+              <a href="https://nextjs.org/">Next.js</a> &#128293;
+            </footer>
+          </ParallaxLayer>
+        </Parallax>
       </LayoutTheme>
     </ThemeProvider>
   );
