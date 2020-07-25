@@ -16,26 +16,30 @@ export function getSortedPosts() {
 
   const posts = files
     .map((filename) => {
-      // Get raw content from file
-      const markdownWithMetadata = fs
-        .readFileSync(`content/posts/${filename}`)
-        .toString();
+      console.log('filename:', filename)
+      if (filename !== '.hidden.md') {
+        // Get raw content from file
+        const markdownWithMetadata = fs
+          .readFileSync(`content/posts/${filename}`)
+          .toString();
 
-      // Parse markdown and get frontmatter data.
-      const { data } = matter(markdownWithMetadata);
+        // Parse markdown and get frontmatter data.
+        const { data } = matter(markdownWithMetadata);
+        if (Object.keys(data).length > 0) {
+          const frontmatter = {
+            ...data,
+            date: getFormattedDate(data.date),
+          };
 
-      const frontmatter = {
-        ...data,
-        date: getFormattedDate(data.date),
-      };
+          // Remove .md file extension from post name
+          const slug = filename.replace(".md", "");
 
-      // Remove .md file extension from post name
-      const slug = filename.replace(".md", "");
-
-      return {
-        slug,
-        frontmatter,
-      };
+          return {
+            slug,
+            frontmatter,
+          };
+        }
+      } return {}
     })
     .sort(
       (a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
@@ -65,10 +69,16 @@ export function getPostBySlug(slug) {
   // Parse markdown, and get markdown's frontmatter and content.
   const { data, content, excerpt } = matter(markdownWithMetadata);
 
-  const frontmatter = {
-    ...data,
-    date: getFormattedDate(data.date),
-  };
+  let frontmatter;
+  if (Object.keys(data).length > 0) {
+    frontmatter = {
+      ...data,
+      date: getFormattedDate(data.date),
+    };
+  } else {
+    frontmatter = { ...data, date: null }
+  }
+
 
   return { frontmatter, post: { content, excerpt } };
 }

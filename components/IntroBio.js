@@ -5,7 +5,7 @@ import { getSiteMetaData } from "utils/helpers";
 
 const Hero = styled.div`
   width: 100%;
-  padding-top: 25%;
+  padding-top: 20%;
 `;
 
 const BigTitle = styled.h1`

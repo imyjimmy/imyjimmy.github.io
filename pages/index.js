@@ -26,7 +26,7 @@ export default function Home({ posts }) {
           <IntroBio />
         </ParallaxLayer>
         <ParallaxLayer offset={1}>
-          {posts.map(({ frontmatter: { title, description, date }, slug }) => (
+          {posts.length > 1 ? posts.map(({ frontmatter: { title, description, date }, slug }) => (
             <article key={slug}>
               <header>
                 <h3 className="mb-2">
@@ -41,7 +41,7 @@ export default function Home({ posts }) {
                 <p className="mb-8">{description}</p>
               </section>
             </article>
-          ))}
+          )) : <div></div>}
         </ParallaxLayer>
         <ParallaxLayer offset={2}>
           <Footer />
@@ -53,7 +53,7 @@ export default function Home({ posts }) {
 
 export async function getStaticProps() {
   const posts = getSortedPosts();
-
+  console.log('posts:', posts);
   return {
     props: {
       posts,
