@@ -22,6 +22,9 @@ const LayoutTheme = styled(Layout)`
   font-family: ${ props => props.theme.fontFamily};
 `;
 
+const StyledLink = styled(Link)`
+  color: ${ props => props.theme.textColor};
+`;
 
 export default function Home({ posts }) {
   return (
@@ -37,9 +40,9 @@ export default function Home({ posts }) {
               <article key={slug}>
                 <header>
                   <h3 className="mb-2">
-                    <Link href={"/post/[slug]"} as={`/ post / ${slug} `}>
+                    <StyledLink href={"/post/[slug]"} as={`/ post / ${slug} `}>
                       <a className="text-3xl text-orange-600 no-underline">{title}</a>
-                    </Link>
+                    </StyledLink>
                   </h3>
                   <span className="mb-4 text-xs">{date}</span>
                 </header>
