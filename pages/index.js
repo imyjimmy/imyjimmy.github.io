@@ -3,13 +3,14 @@ import Link from "next/link";
 import Layout from "components/Layout";
 import IntroBio from "components/IntroBio";
 import SEO from "components/Seo";
+import Footer from "components/Footer";
 import { getSortedPosts } from "utils/posts";
 
 import { ThemeProvider } from 'styled-components';
 import styled from 'styled-components';
-
 import { Parallax, ParallaxLayer } from 'react-spring/addons.cjs';
 
+import StyledLink from 'styles/StyledLink';
 
 const theme = {
   textColor: '#EEE',
@@ -23,9 +24,9 @@ const LayoutTheme = styled(Layout)`
   font-family: ${ props => props.theme.fontFamily};
 `;
 
-const StyledLink = styled.a`
-  color: ${ props => props.theme.textColor};
-`;
+// const StyledLink = styled.a`
+//   color: ${ props => props.theme.textColor};
+// `;
 
 export default function Home({ posts }) {
   return (
@@ -41,8 +42,8 @@ export default function Home({ posts }) {
               <article key={slug}>
                 <header>
                   <h3 className="mb-2">
-                    <Link href={"/post/[slug]"} as={`/ post / ${slug} `} passHref>
-                      <StyledLink className="text-3xl text-orange-600 no-underline">{title}</StyledLink>
+                    <Link href={"/post/[slug]"} as={`/ post / ${slug} `}>
+                      <a className="text-3xl text-orange-600 no-underline">{title}</a>
                     </Link>
                   </h3>
                   <span className="mb-4 text-xs">{date}</span>
@@ -54,10 +55,7 @@ export default function Home({ posts }) {
             ))}
           </ParallaxLayer>
           <ParallaxLayer offset={2}>
-            <footer>
-              © {new Date().getFullYear()}, Built with{" "}
-              <a href="https://nextjs.org/">Next.js</a> &#128293;
-            </footer>
+            <Footer />
           </ParallaxLayer>
         </Parallax>
       </LayoutTheme>
