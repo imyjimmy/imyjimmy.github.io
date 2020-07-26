@@ -18,5 +18,4 @@ const ParallaxLayer = styled(CustomParallaxLayer)`
   margin: 0 10% 0;
 `;
 
-
 export { Parallax, ParallaxLayer };

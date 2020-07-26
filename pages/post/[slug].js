@@ -9,6 +9,7 @@ import SEO from "components/Seo";
 import { getPostBySlug, getPostsSlugs } from "utils/posts";
 
 import styled from 'styled-components';
+import StyledLink from 'styles/StyledLink'
 
 const CodeBlock = ({ language, value }) => {
   return <SyntaxHighlighter language={language} style={tomorrow}>{value}</SyntaxHighlighter>;
@@ -36,9 +37,18 @@ const Text = ({ props, children }) => {
   return (<BlogP>{children}</BlogP>)
 }
 
+const Linky = ({ props, children }) => {
+  console.log('link:', props, children)
+  return (<StyledLink {...props}>{children}</StyledLink>)
+}
+
 const Container = styled.div`
-  margin: 5% 10% 0;
-  position: fixed;
+  font-family: ${ props => props.theme.div.fonts.join(',')};
+  margin: 5% 0% 0;
+  a: {
+    color: ${ props => props.theme.textColor};
+    text-decoration: underline;
+  }
 `;
 
 const BlogH1 = styled.h1`
@@ -60,7 +70,7 @@ export default function Post({ post, frontmatter }) {
           title={frontmatter.title}
           description={frontmatter.description || post.excerpt}
         />
-        <article>
+        <article style={{ width: '50%', margin: 'auto' }}>
           <header>
             <BlogH1 className="my-0">{frontmatter.title}</BlogH1>
             <Time className="text-xs">{frontmatter.date}</Time>
@@ -68,7 +78,7 @@ export default function Post({ post, frontmatter }) {
           <ReactMarkdown
             escapeHtml={false}
             source={post.content}
-            renderers={{ text: Text, code: CodeBlock, image: MarkdownImage }}
+            renderers={{ code: CodeBlock, image: MarkdownImage }}
           />
         </article>
       </Container>

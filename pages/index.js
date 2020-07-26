@@ -11,11 +11,15 @@ import styled from 'styled-components';
 import StyledLink from 'styles/StyledLink';
 import { Parallax, ParallaxLayer } from 'styles/StyledParallax'; //overrides of Parallax from 'react-spring/addons.cjs';
 
+const BlogPreviewDate = styled.span`
+  font-family: ${ props => props.theme.div.fonts.join(',')};
+  font-size: ${ props => props.theme.fontSize.small};
+`;
 
-
-// const StyledLink = styled.a`
-//   color: ${ props => props.theme.textColor};
-// `;
+const BlogPreviewDescription = styled.p`
+  font-family: ${ props => props.theme.div.fonts.join(',')};
+  font-size: ${ props => props.theme.fontSize.medium};
+`;
 
 export default function Home({ posts }) {
   return (
@@ -35,10 +39,10 @@ export default function Home({ posts }) {
                     <StyledLink className="text-3xl text-orange-600 no-underline">{title}</StyledLink>
                   </Link>
                 </h3>
-                <span className="mb-4 text-xs">{date}</span>
+                <BlogPreviewDate>{date}</BlogPreviewDate>
               </header>
               <section>
-                <p className="mb-8">{description}</p>
+                <BlogPreviewDescription>{description}</BlogPreviewDescription>
               </section>
             </article>
           )) : <div></div>}

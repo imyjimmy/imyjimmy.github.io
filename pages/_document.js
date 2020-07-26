@@ -13,7 +13,9 @@ export default class MyDocument extends Document {
       <Html lang={siteMetadata.language}>
         <Head>
           <style>{`
-          #__next { background-color: #1E1E1E; height: 100vh;} `}</style>
+          #__next { background-color: #1E1E1E; height: 100vh;} 
+          html { background-color: #1E1E1E; }
+          `}</style>
           <TypographyStyle typography={typography} />
         </Head>
         <body>
