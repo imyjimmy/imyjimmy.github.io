@@ -4,8 +4,10 @@
 
 module.exports = {
   presets: ['next/babel'],
-  plugins: [
-    [
+  plugins: []
+};
+
+/*[
       "emotion",
       {
         // sourceMap is on by default but source maps are dead code eliminated in production
@@ -15,6 +17,6 @@ module.exports = {
         "cssPropOptimization": true
       }
     ],
-    ["macros"], //tailwind macro that allows 'tw'
-  ]
-};
+    ["macros"], //tailwind macro that allows 'tw' */
+
+    //"@babel/plugin-transform-modules-commonjs"

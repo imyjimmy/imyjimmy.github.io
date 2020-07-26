@@ -32,13 +32,14 @@
     "react-dom": "16.13.1",
     "react-markdown": "^4.3.1",
     "react-spring": "7.2.8",
-    "react-syntax-highlighter": "^12.2.1",
+    "react-syntax-highlighter": "13.0.0",
     "react-typography": "^0.16.19",
     "styled-components": "^5.1.1",
     "typography": "^0.16.19",
     "typography-theme-sutro": "^0.16.19"
   },
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.10.4",
     "babel-plugin-styled-components": "^1.10.7",
     "gray-matter": "^4.0.2",
     "typeface-cantata-one": "^0.0.54",
