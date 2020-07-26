@@ -1,3 +1,5 @@
+// import React, { Component } from "react";
+
 import "typeface-open-sans";
 import "typeface-merriweather";
 import 'typeface-cantata-one';
@@ -25,3 +27,11 @@ export default function MyApp({ Component, pageProps }) {
       <Component {...pageProps} />
     </ThemeProvider>);
 }
+
+// class MyApp extends Component {
+//   render() {
+//     return <App />
+//   }
+// }
+
+// export default MyApp

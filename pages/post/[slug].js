@@ -1,23 +1,28 @@
 import ReactMarkdown from "react-markdown/with-html";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-
+// okaidia, atomDark, tomorrow, cb, darcula, pojoaque
+// base16AteliersulphurpoolLight has cool font
+import { tomorrow } from 'react-syntax-highlighter/dist/cjs/styles/prism'; //<- doesnt work
 import { LayoutTheme as Layout } from "components/Layout";
 import Image from "components/Image";
 import SEO from "components/Seo";
 import { getPostBySlug, getPostsSlugs } from "utils/posts";
 
 const CodeBlock = ({ language, value }) => {
-  return <SyntaxHighlighter language={language}>{value}</SyntaxHighlighter>;
+  return <SyntaxHighlighter language={language} style={tomorrow}>{value}</SyntaxHighlighter>;
 };
 
-const MarkdownImage = ({ alt, src }) => (
-  <Image
-    alt={alt}
-    src={require(`../../content/assets/${src}`)}
-    previewSrc={require(`../../content/assets/${src}?lqip`)}
-    className="w-full"
-  />
-);
+const MarkdownImage = ({ alt, src }) => {
+  console.log('image src:', src);
+  return (
+    <Image
+      alt={alt}
+      src={require(`../../content/assets/${src}`)}
+      previewSrc={require(`../../content/assets/${src}?lqip`)}
+    // className="w-full"
+    />
+  )
+};
 
 export default function Post({ post, frontmatter }) {
   return (

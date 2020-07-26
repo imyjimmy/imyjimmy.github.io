@@ -1,8 +1,13 @@
 import "lazysizes";
+import styled from 'styled-components'
 
-export default function Image({ alt, src, previewSrc, className }) {
+const CustomImage = styled.img`
+  max-width: 30%;
+`;
+
+function Image({ alt, src, previewSrc, className }) {
   return (
-    <img
+    <CustomImage
       className={`lazyload blur-up ${className}`}
       alt={alt}
       src={previewSrc}
@@ -10,3 +15,5 @@ export default function Image({ alt, src, previewSrc, className }) {
     />
   );
 }
+
+export default Image

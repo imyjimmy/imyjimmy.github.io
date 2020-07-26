@@ -26,7 +26,7 @@ export default function Home({ posts }) {
           <IntroBio />
         </ParallaxLayer>
         <ParallaxLayer offset={1}>
-          {posts.length > 1 ? posts.map(({ frontmatter: { title, description, date }, slug }) => (
+          {posts.length > 0 ? posts.map(({ frontmatter: { title, description, date }, slug }) => (
             <article key={slug}>
               <header>
                 <h3 className="mb-2">
