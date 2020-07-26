@@ -27,7 +27,7 @@ function Layout({ className, children }) {
   return (
     <div className={className + " max-w-screen-sm px-4 py-8 mx-auto"}>
       {/* <header>{header}</header> */}
-      <main>{children}</main>
+      <main>{children}</main> {/* style={{ position: 'fixed' }} */}
     </div>
   );
 }
@@ -35,7 +35,7 @@ function Layout({ className, children }) {
 const LayoutTheme = styled(Layout)`
   background-color: ${ props => props.theme.backgroundColor};
   color: ${ props => props.theme.textColor};
-  font-family: ${ props => props.theme.fontFamily};
+  font-family: ${ props => props.theme.fonts[0]};
 `;
 
 export { Layout, LayoutTheme }

@@ -21,17 +21,8 @@ library.add(
 );
 
 export default function MyApp({ Component, pageProps }) {
-  console.log(Component)
   return (
     <ThemeProvider theme={theme} >
       <Component {...pageProps} />
     </ThemeProvider>);
 }
-
-// class MyApp extends Component {
-//   render() {
-//     return <App />
-//   }
-// }
-
-// export default MyApp

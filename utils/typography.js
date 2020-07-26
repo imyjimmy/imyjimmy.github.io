@@ -1,5 +1,6 @@
 import Typography from "typography";
 import SutroTheme from "typography-theme-sutro";
+import bootstrapTheme from "typography-theme-bootstrap";
 
 delete SutroTheme.googleFonts;
 
