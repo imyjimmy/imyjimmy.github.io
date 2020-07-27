@@ -1,8 +1,10 @@
-import styled from 'react-emotion';
-import { ParallaxLayer } from 'react-spring/dist/addons';
+import styled from 'styled-components';
+import { ParallaxLayer } from 'react-spring/addons.cjs';
 
 const Divider = styled(ParallaxLayer)`
-  ${tw('absolute w-full h-full')};
+  position: absolute;
+  width: 100vw;
+  height: 110vh;
   background: ${props => props.bg};
   svg {
     fill: ${props => props.fill};
