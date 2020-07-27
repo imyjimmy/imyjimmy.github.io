@@ -37,7 +37,7 @@ export default function Home({ posts }) {
           speed={0.25}
           offset={0.75}
           factor={2}
-          clipPath="polygon(0 15%,100% 25%,100% 85%,0 75%)"
+          clipPath="polygon(0 15%,100% 20%,100% 85%,0 80%)"
         />
         <ParallaxLayer speed={0.4} offset={1} factor={2}>
           <h1>Blog</h1>
