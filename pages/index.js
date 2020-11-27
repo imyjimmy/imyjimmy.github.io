@@ -27,6 +27,7 @@ export default function Home({ posts }) {
   return (
     <LayoutTheme>
       <SEO title="All posts" />
+      { console.log('HELLO_WORLD test env variable: ', process.env.HELLO_WORLD)}
       <Parallax pages={4} scrolling={true}>
         <ParallaxLayer offset={0} factor={1}>
           <IntroBio />

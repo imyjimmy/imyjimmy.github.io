@@ -57,6 +57,12 @@ const BlogH1 = styled.h1`
   font-weight: 600;
 `;
 
+const BlogH2 = styled.h2`
+  font-size: 1.8rem;
+  font-family: ${ props => props.theme.fonts[1]};
+  font-weight: 500;
+`
+
 const Time = styled.p`
   font-family: ${ props => props.theme.div.fonts.join(',')};
   font-size: ${ props => props.theme.fontSize.small};
@@ -73,6 +79,7 @@ export default function Post({ post, frontmatter }) {
         <article style={{ width: '50%', margin: 'auto' }}>
           <header>
             <BlogH1 className="my-0">{frontmatter.title}</BlogH1>
+            <BlogH2>{frontmatter.description}</BlogH2>
             <Time className="text-xs">{frontmatter.date}</Time>
           </header>
           <ReactMarkdown
