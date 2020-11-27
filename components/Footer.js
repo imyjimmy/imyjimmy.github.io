@@ -1,9 +1,6 @@
 import styled from 'styled-components';
 import StyledLink from 'styles/StyledLink';
 
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { CustomFontAwesomeIcon } from 'styles/FontAwesomeIcon'
-
 const Copyright = styled.div`
   font-size: .85rem;
 
@@ -32,17 +29,13 @@ const Social = styled.div`
   margin-bottom: 1rem;
 `
 
-const FontAwesomeIcon = styled(CustomFontAwesomeIcon)`
-  margin: .5rem;
-`;
-
 const Footer = () => {
   return (
     <StyledFooter>
       <Social>
-        <StyledLink href="https://github.com/imyjimmy"><FontAwesomeIcon icon={["fab", "github"]} /></StyledLink>
-        <StyledLink href="https://linkedin.com/in/imyjimmy"><FontAwesomeIcon icon={["fab", "linkedin-in"]} /></StyledLink>
-        <StyledLink href="https://twitter.com/imyjimmy"><FontAwesomeIcon icon={["fab", "twitter"]} /></StyledLink>
+        <StyledLink href="https://github.com/imyjimmy"></StyledLink>
+        <StyledLink href="https://linkedin.com/in/imyjimmy"></StyledLink>
+        <StyledLink href="https://twitter.com/imyjimmy"></StyledLink>
       </Social>
       <Copyright>
         © {new Date().getFullYear()}, Built with{" "}

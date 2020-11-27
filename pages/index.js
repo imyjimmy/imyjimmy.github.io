@@ -14,20 +14,22 @@ import { Parallax, ParallaxLayer } from 'styles/StyledParallax'; //overrides of 
 import Divider from 'components/Divider';
 
 const BlogPreviewDate = styled.span`
-  font-family: ${ props => props.theme.div.fonts.join(',')};
-  font-size: ${ props => props.theme.fontSize.small};
+  font-family: ${props => props.theme.div.fonts.join(',')};
+  font-size: ${props => props.theme.fontSize.small};
 `;
 
 const BlogPreviewDescription = styled.p`
-  font-family: ${ props => props.theme.div.fonts.join(',')};
-  font-size: ${ props => props.theme.fontSize.medium};
+  font-family: ${props => props.theme.div.fonts.join(',')};
+  font-size: ${props => props.theme.fontSize.medium};
 `;
 
 export default function Home({ posts }) {
   return (
     <LayoutTheme>
       <SEO title="All posts" />
-      { console.log('HELLO_WORLD test env variable: ', process.env.HELLO_WORLD)}
+      { console.log('NEXT_PUBLIC_HELLO_WORLD test env variable: ', process.env.NEXT_PUBLIC_HELLO_WORLD) }
+      { console.log('HELLO_SECRET', process.env.HELLO_SECRET) }
+
       <Parallax pages={4} scrolling={true}>
         <ParallaxLayer offset={0} factor={1}>
           <IntroBio />
