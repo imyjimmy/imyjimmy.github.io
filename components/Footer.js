@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { SocialLinkedin, SocialTwitter } from '@styled-icons/typicons';
+import { Github } from '@styled-icons/boxicons-logos/Github';
 import StyledLink from 'styles/StyledLink';
 
 const Copyright = styled.div`
@@ -29,13 +31,17 @@ const Social = styled.div`
   margin-bottom: 1rem;
 `
 
+const WhiteTwitter = styled(SocialTwitter)`
+  color: red;
+`
+
 const Footer = () => {
   return (
     <StyledFooter>
       <Social>
-        <StyledLink href="https://github.com/imyjimmy"></StyledLink>
-        <StyledLink href="https://linkedin.com/in/imyjimmy"></StyledLink>
-        <StyledLink href="https://twitter.com/imyjimmy"></StyledLink>
+        <StyledLink href="https://github.com/imyjimmy"><Github size="48"/></StyledLink>
+        <StyledLink href="https://linkedin.com/in/imyjimmy"><SocialLinkedin size="48"/></StyledLink>
+        <StyledLink href="https://twitter.com/imyjimmy"><SocialTwitter size="48"/></StyledLink>
       </Social>
       <Copyright>
         © {new Date().getFullYear()}, Built with{" "}
