@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { Layout, LayoutTheme } from "components/Layout";
+import Nav from "components/Nav";
 import IntroBio from "components/IntroBio";
 import SEO from "components/Seo";
 import Footer from "components/Footer";
@@ -27,9 +28,7 @@ export default function Home({ posts }) {
   return (
     <LayoutTheme>
       <SEO title="All posts" />
-      { console.log('NEXT_PUBLIC_HELLO_WORLD test env variable: ', process.env.NEXT_PUBLIC_HELLO_WORLD) }
-      { console.log('HELLO_SECRET', process.env.HELLO_SECRET) }
-
+      <Nav />
       <Parallax pages={4} scrolling={true}>
         <ParallaxLayer offset={0} factor={1}>
           <IntroBio />

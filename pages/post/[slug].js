@@ -71,6 +71,7 @@ const Time = styled.p`
 export default function Post({ post, frontmatter }) {
   return (
     <Layout>
+      <StyledLink href="/" className="text-3xl text-orange-600 no-underline">Home</StyledLink>
       <Container>
         <SEO
           title={frontmatter.title}

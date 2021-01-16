@@ -31,6 +31,7 @@
     "react-spring": "7.2.8",
     "react-syntax-highlighter": "13.0.0",
     "react-typography": "^0.16.19",
+    "reactjs-popup": "^2.0.4",
     "styled-components": "^5.1.1",
     "styled-icons": "^10.22.0",
     "typography": "^0.16.19",
