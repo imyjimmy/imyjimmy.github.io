@@ -1,38 +1,38 @@
-import Link from "next/link";
+import { useRef } from 'react'
+import Link from 'next/link'
 
-import { Layout, LayoutTheme } from "components/Layout";
-import IntroBio from "components/IntroBio";
-import SEO from "components/Seo";
-import Footer from "components/Footer";
-import { getSortedPosts } from "utils/posts";
+import { Layout, LayoutTheme } from 'components/Layout'
+import IntroBio from 'components/IntroBio'
+import SEO from 'components/Seo'
+import Footer from 'components/Footer'
+import { getSortedPosts } from 'utils/posts'
 
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-import { Subtitle } from 'styles/Text';
-import StyledLink from 'styles/StyledLink';
-import { Parallax, ParallaxLayer } from 'styles/StyledParallax'; //overrides of Parallax from 'react-spring/addons.cjs';
-import Divider from 'components/Divider';
+import { Subtitle } from 'styles/Text'
+import StyledLink from 'styles/StyledLink'
+import { Parallax, ParallaxLayer } from 'styles/StyledParallax' //overrides of Parallax from '@react-spring/parallax';
+import Divider from 'components/Divider'
 
 const BlogPreviewDate = styled.span`
-  font-family: ${props => props.theme.div.fonts.join(',')};
-  font-size: ${props => props.theme.fontSize.small};
-`;
+  font-family: ${(props) => props.theme.div.fonts.join(',')};
+  font-size: ${(props) => props.theme.fontSize.small};
+`
 
 const BlogPreviewDescription = styled.p`
-  font-family: ${props => props.theme.div.fonts.join(',')};
-  font-size: ${props => props.theme.fontSize.medium};
-`;
+  font-family: ${(props) => props.theme.div.fonts.join(',')};
+  font-size: ${(props) => props.theme.fontSize.medium};
+`
 
 export default function Home({ posts }) {
+  const parallaxRef = useRef(null);
+
   return (
     <LayoutTheme>
       <SEO title="All posts" />
-      { console.log('NEXT_PUBLIC_HELLO_WORLD test env variable: ', process.env.NEXT_PUBLIC_HELLO_WORLD) }
-      { console.log('HELLO_SECRET', process.env.HELLO_SECRET) }
-
-      <Parallax pages={4} scrolling={true}>
+      <Parallax pages={4} ref={parallaxRef}>
         <ParallaxLayer offset={0} factor={1}>
-          <IntroBio />
+          <IntroBio targetRef={parallaxRef} />
         </ParallaxLayer>
         <Divider
           bg="linear-gradient(to right, #1D2D44 0%, #3E5C76 100%)"
@@ -43,38 +43,42 @@ export default function Home({ posts }) {
           clipPath="polygon(0 15%,100% 20%,100% 85%,0 80%)"
         />
         <ParallaxLayer speed={0.4} offset={1} factor={2}>
-          <h1>Blog</h1>
-          {posts.length > 0 ? posts.map(({ frontmatter: { title, description, date }, slug }) => (
-            <article key={slug}>
-              <header>
-                <h3>
-                  <Link href={"/post/[slug]"} as={`/post/${slug}`} passHref>
-                    {/* Styled Link: https://github.com/vercel/next.js/issues/1942#issuecomment-325940359 */}
-                    <StyledLink className="text-3xl text-orange-600 no-underline">{title}</StyledLink>
-                  </Link>
-                </h3>
-                <BlogPreviewDate>{date}</BlogPreviewDate>
-              </header>
-              <section>
-                <BlogPreviewDescription>{description}</BlogPreviewDescription>
-              </section>
-            </article>
-          )) : <div></div>}
+          <h1 id="blog" onClick={() => parallaxRef.current.scrollTo(0)}>Blog</h1>
+          {posts.length > 0 ? (
+            posts.map(({ frontmatter: { title, description, date }, slug }) => (
+              <article key={slug}>
+                <header>
+                  <h3>
+                    <Link href={'/post/[slug]'} as={`/post/${slug}`} passHref>
+                      {/* Styled Link: https://github.com/vercel/next.js/issues/1942#issuecomment-325940359 */}
+                      <StyledLink className="text-3xl text-orange-600 no-underline">{title}</StyledLink>
+                    </Link>
+                  </h3>
+                  <BlogPreviewDate>{date}</BlogPreviewDate>
+                </header>
+                <section>
+                  <BlogPreviewDescription>{description}</BlogPreviewDescription>
+                </section>
+              </article>
+            ))
+          ) : (
+            <div></div>
+          )}
         </ParallaxLayer>
         <ParallaxLayer offset={3}>
           <Footer />
         </ParallaxLayer>
       </Parallax>
     </LayoutTheme>
-  );
+  )
 }
 
 export async function getStaticProps() {
-  const posts = getSortedPosts();
-  console.log('posts:', posts);
+  const posts = getSortedPosts()
+  console.log('posts:', posts)
   return {
     props: {
       posts,
     },
-  };
+  }
 }

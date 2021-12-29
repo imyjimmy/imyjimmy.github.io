@@ -50,7 +50,7 @@ What you have to do is to remember to pass the prop `className` along. As an exa
 
 ```jsx
 import styled from 'styled-components';
-import { Parallax as P, ParallaxLayer as PL } from 'react-spring/addons.cjs';
+import { Parallax as P, ParallaxLayer as PL } from '@react-spring/parallax';
 
 const CustomParallax = ({ className, children, ...rest }) => {
   return (
@@ -78,7 +78,7 @@ In the relevant file, I simply import `ParallaxLayer` as if everything is normal
 
 ```jsx
 import { Parallax, ParallaxLayer } from 'styles/StyledParallax'; 
-//overrides of Parallax from 'react-spring/addons.cjs';
+//overrides of Parallax from '@react-spring/parallax';
 ```
 Finally I get the margins that I want, which seems trivial, but at least this particular rule is isolated to just ParallaxLayer and not conflicting with anything else.
 

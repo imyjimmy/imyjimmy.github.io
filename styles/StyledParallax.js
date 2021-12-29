@@ -1,11 +1,11 @@
 import styled from 'styled-components';
-import { Parallax as P, ParallaxLayer as PL } from 'react-spring/addons.cjs';
+import { Parallax as P, ParallaxLayer as PL } from '@react-spring/parallax';
 
-const CustomParallax = ({ className, children, ...rest }) => {
+const CustomParallax =  React.forwardRef(({ className, children, ...rest }, ref) => {
   return (
-    <P className={className} {...rest}>{children}</P>
+    <P className={className} ref={ref} {...rest}>{children}</P>
   )
-}
+})
 
 const CustomParallaxLayer = ({ className, children, ...rest }) => {
   return (<PL className={className} {...rest}>{children}</PL>)

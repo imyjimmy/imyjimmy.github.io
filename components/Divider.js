@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { ParallaxLayer } from 'react-spring/addons.cjs';
+import styled from 'styled-components'
+import { ParallaxLayer } from '@react-spring/parallax'
 
 const Divider = styled(ParallaxLayer)`
   position: absolute;
