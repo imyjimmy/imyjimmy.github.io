@@ -10,7 +10,6 @@ export default function IntroBio({ targetRef }) {
 
   return (
     <Hero>
-      {console.log('ref:', targetRef)}
       <BigTitle>Jimmy Zhang</BigTitle>
       <Subtitle>Expert React Developer with an 👁 for Design</Subtitle>
       <div>

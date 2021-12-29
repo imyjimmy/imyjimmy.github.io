@@ -75,7 +75,6 @@ export default function Home({ posts }) {
 
 export async function getStaticProps() {
   const posts = getSortedPosts()
-  console.log('posts:', posts)
   return {
     props: {
       posts,

@@ -16,7 +16,6 @@ const CodeBlock = ({ language, value }) => {
 };
 
 const MarkdownImage = ({ alt, src }) => {
-  console.log('image src:', src);
   return (
     <Image
       alt={alt}
@@ -33,12 +32,10 @@ const BlogP = styled.div`
 `;
 
 const Text = ({ props, children }) => {
-  console.log('text', props, children)
   return (<BlogP>{children}</BlogP>)
 }
 
 const Linky = ({ props, children }) => {
-  console.log('link:', props, children)
   return (<StyledLink {...props}>{children}</StyledLink>)
 }
 

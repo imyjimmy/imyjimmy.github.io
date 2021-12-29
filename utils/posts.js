@@ -16,7 +16,6 @@ export function getSortedPosts() {
 
   const posts = files
     .map((filename) => {
-      console.log('filename:', filename)
       if (filename !== '.hidden.md') {
         // Get raw content from file
         const markdownWithMetadata = fs

@@ -12,7 +12,6 @@ const LayoutThemeCrypto = styled(LayoutTheme)`
 const CryptoPrices = ({ data }) => {
 
   useEffect(() => {
-    console.log(data)
   }, [data])
 
   return (<LayoutThemeCrypto><Hero id='hey-ma'><BigTitle>Crypto</BigTitle></Hero></LayoutThemeCrypto>)
