@@ -69,8 +69,8 @@ export default function Demos() {
         />
       </Head>
       <SimpleLayout
-        title="Quick sketches of ideas I've had over the years."
-        intro="Keeping track of all my side projects, quick demos, and more"
+        title="A Catalog of Quick Sketches and Ideas"
+        intro="Keeping track of my side projects, quick demos, and more. Thoughts and figures"
       >
         <ul
           role="list"
