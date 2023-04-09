@@ -1,3 +1,5 @@
+import { SimpleLayout } from '@/components/SimpleLayout'
+
 import * as d3 from "d3";
 import fetch from "isomorphic-unfetch";
 
@@ -13,8 +15,8 @@ export async function getServerSideProps() {
   return { props: { btcPrice } };
 }
 
-const BitcoinChart = ({ btcPrice }) => {
-  const margin = { top: 20, right: 20, bottom: 30, left: 50 };
+const bitcoinregrets = ({ btcPrice }) => {
+  const margin = { top: 20, right: 20, bottom: 30, left: 60 };
   const width = 960 - margin.left - margin.right;
   const height = 500 - margin.top - margin.bottom;
 
@@ -40,12 +42,15 @@ const BitcoinChart = ({ btcPrice }) => {
     .curve(d3.curveCatmullRom.alpha(0.5));
 
   return (
-    <div>
+    <SimpleLayout
+        title="Bitcoin Regrets"
+        intro="What if you bought bitcoin earlier?"
+      >
+    <div id="hey" className="w-full bg-white dark:text-zinc-400 dark:bg-zinc-900 dark:ring-zinc-300/20">
       {/* { console.log('btcPrice:', btcPrice, 'line(btcPrice): ', line(btcPrice))} */}
-      <h1>Bitcoin Price (USD)</h1>
       <svg viewBox={`0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`}>
         <g transform={`translate(${margin.left}, ${margin.top})`}>
-          <path d={line(btcPrice)} fill="none" stroke="steelblue" strokeWidth="2" />
+          <path d={line(btcPrice)} fill="none" stroke="orange" strokeWidth="2" />
           <g transform={`translate(0, ${height})`}>
             <g className="x-axis" ref={(node) => d3.select(node).call(d3.axisBottom(x).tickFormat(d3.timeFormat("%Y-%m")))} />
             <text
@@ -59,8 +64,10 @@ const BitcoinChart = ({ btcPrice }) => {
           </g>
           <g className="y-axis" ref={(node) => d3.select(node).call(d3.axisLeft(y))} />
           <text
+            //color='red' //'rgb(161,161,170);'
+            fill='#a1a1aa'
             x={-height / 2}
-            y={-margin.left}
+            y={-0.85*margin.left}
             textAnchor="middle"
             transform={`rotate(-90)`}
             dominantBaseline="middle"
@@ -70,7 +77,8 @@ const BitcoinChart = ({ btcPrice }) => {
         </g>
       </svg>
     </div>
+    </SimpleLayout>
   );
 };
 
-export default BitcoinChart;
+export default bitcoinregrets;
