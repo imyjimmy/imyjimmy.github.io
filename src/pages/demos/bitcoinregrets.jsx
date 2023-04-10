@@ -38,7 +38,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-const bitcoinregrets = ({ btcPrice }) => {
+const BitcoinRegrets = ({ btcPrice }) => {
   const [usd, setUsd] = useState()
   const [historicPrice, setHistoricPrice] = useState()
   const [currentBtcPrice, setCurrentBtcPrice] = useState()
@@ -258,4 +258,4 @@ const bitcoinregrets = ({ btcPrice }) => {
   );
 };
 
-export default bitcoinregrets;
+export default BitcoinRegrets;
