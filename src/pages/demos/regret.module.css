@@ -1,0 +1,12 @@
+.regret {
+  background: red;
+}
+
+.regretrospective {
+  position: absolute;
+  /* top: 400px;
+  left: 400px; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}

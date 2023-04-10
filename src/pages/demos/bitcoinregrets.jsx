@@ -1,10 +1,11 @@
-import { useState, Fragment } from 'react'
+import { useEffect, useState, Fragment } from 'react'
 import { Menu, Transition } from '@headlessui/react'
 
 import { SimpleLayout } from '@/components/SimpleLayout'
-
 // import MonthSelector from '@/components/MonthSelector';
 // import YearSelector from '@/components/YearSelector';
+
+import styles from '@/pages/demos/regret.module.css'
 
 import * as d3 from "d3";
 import fetch from "isomorphic-unfetch";
@@ -39,12 +40,43 @@ function classNames(...classes) {
 
 const bitcoinregrets = ({ btcPrice }) => {
   const [usd, setUsd] = useState()
+  const [historicPrice, setHistoricPrice] = useState()
+  const [currentBtcPrice, setCurrentBtcPrice] = useState()
+  const [btcAmt, setBtcAmt] = useState()
+
   /* set up years and months */
   const [month, setMonth] = useState()
   const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
   const [year, setYear] = useState()
   const years = [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023];
+
+  useEffect(() => {
+    async function fetchData(month) {
+      const response = await fetch(`https://api.coingecko.com/api/v3/coins/bitcoin/history?date=01-${month}-${year}&localization=false`)
+      // console.log('historical price: ', response.json())
+      const prices = await response.json()
+
+      const currentPrice = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd')
+      const current = await currentPrice.json()
+      setCurrentBtcPrice(current.bitcoin.usd)
+
+      let historicPrice = prices.market_data.current_price.usd;
+      console.log('usd:', historicPrice, 'amt of btc could\'ve purchased: ', usd / historicPrice)
+      setHistoricPrice(historicPrice)
+      setBtcAmt( usd / historicPrice )
+    }
+
+    if (usd && month && year) {
+      console.log('all three conditions met')
+
+      let monthStr = String(months.indexOf(month) + 1)
+      if (monthStr.length === 1) {
+        monthStr = "0" + monthStr
+      }
+      fetchData(monthStr)
+    }
+  }, [month, year])
 
   const handleInputAmt = (event) => {
     event.preventDefault()
@@ -53,14 +85,14 @@ const bitcoinregrets = ({ btcPrice }) => {
   }
 
   const handleSelectMonth = (month) => (event) => {
-    console.log('select:', event, event.target, event.target.value, month)
-    event.preventDefault()
+    // console.log('select:', event, event.target, event.target.value, month)
+    // event.preventDefault()
     setMonth(month)
   }
 
   const handleSelectYear = (year) => (event) => {
-    console.log('select:', event, event.target, event.target.value, year)
-    event.preventDefault()
+    // console.log('select:', event, event.target, event.target.value, year)
+    // event.preventDefault()
     setYear(year)
   }
 
@@ -91,13 +123,12 @@ const bitcoinregrets = ({ btcPrice }) => {
 
   return (
     <SimpleLayout
-        title="Bitcoin Regrets"
-        intro="What if you bought bitcoin earlier?"
-      >
+      title="Bitcoin Regrets"
+      intro="What if you bought bitcoin earlier?"
+    >
     <div id="hey" className="w-full bg-white dark:text-zinc-400 dark:bg-zinc-900 dark:ring-zinc-300/20">
       {/* { console.log('btcPrice:', btcPrice, 'line(btcPrice): ', line(btcPrice))} */}
-      {/* <div>{usd},{month},{year}</div> */}
-      <h2 className="text-2xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-6xl">I wish I bought $<input onChange={handleInputAmt} className="w-1/6 bg-black dark:bg-white text-zinc-900"></input></h2>
+      <h2 className="text-2xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-6xl">I wish I bought $<input onChange={handleInputAmt} className="w-1/6 bg-black dark:bg-white text-zinc-100 dark:text-zinc-900"></input></h2>
       <h3 className="mt-4 dark:text-zinc-100 sm:text-5xl">worth of bitcoin in {' '}
       <Menu as="div" className="relative inline-block text-left">
       <div>
@@ -105,7 +136,6 @@ const bitcoinregrets = ({ btcPrice }) => {
          { month ?? (<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>)}
         </Menu.Button>
       </div>
-
       <Transition
         as={Fragment}
         enter="transition ease-out duration-100"
@@ -175,10 +205,29 @@ const bitcoinregrets = ({ btcPrice }) => {
           </div>
         </Menu.Items>
       </Transition>
-    </Menu></h3>
+    </Menu>
+    </h3>
+      { btcAmt ? 
+      (
+      <div style={{ 'position': 'relative' }}>
+        <div className={styles.regretrospective + ' font-bold bg-black dark:bg-white text-zinc-100 dark:text-zinc-900 sm:text-6xl'}>
+          <h3>You would have</h3> 
+          <h3>{btcAmt.toFixed(2)} btc</h3>
+          <h3>worth ${btcAmt.toFixed(2) * currentBtcPrice} today</h3>
+        </div>
+      </div>
+      ) : (<></>)}
       <svg viewBox={`0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`}>
         <g transform={`translate(${margin.left}, ${margin.top})`}>
           <path d={line(btcPrice)} fill="none" stroke="orange" strokeWidth="2" />
+          {/* <text
+            enableBackground={true}
+            fill="#f4f4f5" //text-zinc-100
+            className={styles.regret + ' text-2xl font-bold'}
+            textAnchor='middle'
+            x={width/2}
+            y={height/2}
+          >hello world</text> */}
           {/* <g transform={`translate(0, ${height})`}>
             <g className="x-axis" ref={(node) => d3.select(node).call(d3.axisBottom(x).tickFormat(d3.timeFormat("%Y-%m")))} />
             <text
