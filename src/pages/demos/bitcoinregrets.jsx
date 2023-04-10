@@ -76,7 +76,7 @@ const BitcoinRegrets = ({ btcPrice }) => {
       }
       fetchData(monthStr)
     }
-  }, [month, year])
+  }, [usd, month, year])
 
   const handleInputAmt = (event) => {
     event.preventDefault()
