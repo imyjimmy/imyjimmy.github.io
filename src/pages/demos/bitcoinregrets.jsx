@@ -128,7 +128,7 @@ const BitcoinRegrets = ({ btcPrice }) => {
       <h3 className="mt-4 dark:text-zinc-100 sm:text-5xl">worth of bitcoin in {' '}
       <Menu as="div" className="relative inline-block text-left">
       <div>
-        <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 bg-black dark:bg-white px-3 py-2 font-semibold text-gray-900 shadow-sm hover:bg-gray-50">
+        <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 bg-black dark:bg-white px-3 py-2 font-semibold text-zinc-100 dark:text-zinc-900 shadow-sm hover:bg-gray-50">
          { month ?? (<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>)}
         </Menu.Button>
       </div>
@@ -165,7 +165,7 @@ const BitcoinRegrets = ({ btcPrice }) => {
     </Menu> of {/* h3 text */}
     <Menu as="div" className="relative inline-block text-left">
       <div>
-        <Menu.Button className="inline-flex w-40 justify-center gap-x-1.5 bg-black dark:bg-white px-3 py-2 font-semibold text-gray-900 shadow-sm hover:bg-gray-50">
+        <Menu.Button className="inline-flex w-40 justify-center gap-x-1.5 bg-black dark:bg-white px-3 py-2 font-semibold text-zinc-100 dark:text-zinc-900 shadow-sm hover:bg-gray-50">
         { year ?? <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> }
         {/* {year} */}
         </Menu.Button>
