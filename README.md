@@ -1,52 +1,42 @@
-<h1 align="center">
-  Next.js blog starter
-</h1>
+# Spotlight
 
-Start off your writing journey with this Next.js markdown blog template.
+Spotlight is a [Tailwind UI](https://tailwindui.com) site template built using [Tailwind CSS](https://tailwindcss.com) and [Next.js](https://nextjs.org).
 
-## ✏ Features
+## Getting started
 
-- Streamlined styling experience with [Tailwind.css](https://tailwindcss.com/).
-- Automatic image preview and optimization with [next-optimized-images](https://github.com/cyrilwanner/next-optimized-images).
-- Lazyload images.
-- Absolute imports.
-- SEO friendly.
-- 20+ themes with [Typography.js](https://github.com/cyrilwanner/next-optimized-images).
-- Markdown code highlighting with [react-syntax-highlighter](https://www.npmjs.com/package/react-syntax-highlighter) and [PrismJs](https://prismjs.com/).
+To get started with this template, first install the npm dependencies:
 
-## 🚀 Getting Started
+```bash
+npm install
+```
 
-First, run the development server:
+Next, create a `.env.local` file in the root of your project and set the `NEXT_PUBLIC_SITE_URL` variable to your site's public URL:
+
+```
+NEXT_PUBLIC_SITE_URL=https://example.com
+```
+
+Next, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Finally, open [http://localhost:3000](http://localhost:3000) in your browser to view the website.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Customizing
 
-## 📖 Learn More
+You can start editing this template by modifying the files in the `/src` folder. The site will auto-update as you edit these files.
 
-To learn more about Next.js, take a look at the following resources:
+## License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This site template is a commercial product and is licensed under the [Tailwind UI license](https://tailwindui.com/license).
 
-You can check out [the Next.js GitHub repository](https://github.com/zeit/next.js/) - your feedback and contributions are welcome!
+## Learn more
 
-## ☑ Upcoming features
+To learn more about the technologies used in this site template, see the following resources:
 
-- [ ] Add Sitemap
-- [ ] Add RSS Feed
-- [ ] Dark Mode
-- [x] Add SEO Component
-- [x] Add Dynamic Site Metadata
-
-## ☁ Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Jfelix61/nextjs-starter-blog)
-
-[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/import/project?template=https://github.com/Jfelix61/nextjs-starter-blog)
+- [Tailwind CSS](https://tailwindcss.com/docs) - the official Tailwind CSS documentation
+- [Next.js](https://nextjs.org/docs) - the official Next.js documentation
+- [Headless UI](https://headlessui.dev) - the official Headless UI documentation
+- [MDX](https://mdxjs.com) - the MDX documentation
