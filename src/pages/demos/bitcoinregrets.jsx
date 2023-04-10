@@ -16,9 +16,9 @@ export async function getServerSideProps() {
   /* Jan 1, 2013: 1357027200
     Jan 1, 2022: 1641024000
   */
+  const jan2013 = 1357027200
   
-  console.log('time: ', today)
-  const response = await fetch(`https://api.coingecko.com/api/v3/coins/bitcoin/market_chart/range?vs_currency=usd&from=1641024000&to=${today}`);
+  const response = await fetch(`https://api.coingecko.com/api/v3/coins/bitcoin/market_chart/range?vs_currency=usd&from=${jan2013}&to=${today}`);
   const { prices } = await response.json();
 
   const btcPrice = Object.entries(prices).map(([,[date, price]]) => { 
@@ -29,10 +29,10 @@ export async function getServerSideProps() {
   return { props: { btcPrice } };
 }
 
-const getUnixTime = (month,year) => {
-  let x = new Date(`${year}-${month}-01`).valueOf()
-  return x;
-}
+// const getUnixTime = (month,year) => {
+//   let x = new Date(`${year}-${month}-01`).valueOf()
+//   return x;
+// }
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -62,7 +62,7 @@ const BitcoinRegrets = ({ btcPrice }) => {
       setCurrentBtcPrice(current.bitcoin.usd)
 
       let historicPrice = prices.market_data.current_price.usd;
-      console.log('usd:', historicPrice, 'amt of btc could\'ve purchased: ', usd / historicPrice)
+      // console.log('usd:', historicPrice, 'amt of btc could\'ve purchased: ', usd / historicPrice)
       setHistoricPrice(historicPrice)
       setBtcAmt( usd / historicPrice )
     }
@@ -85,14 +85,10 @@ const BitcoinRegrets = ({ btcPrice }) => {
   }
 
   const handleSelectMonth = (month) => (event) => {
-    // console.log('select:', event, event.target, event.target.value, month)
-    // event.preventDefault()
     setMonth(month)
   }
 
   const handleSelectYear = (year) => (event) => {
-    // console.log('select:', event, event.target, event.target.value, year)
-    // event.preventDefault()
     setYear(year)
   }
 
@@ -213,7 +209,7 @@ const BitcoinRegrets = ({ btcPrice }) => {
         <div className={styles.regretrospective + ' font-bold bg-black dark:bg-white text-zinc-100 dark:text-zinc-900 sm:text-6xl'}>
           <h3>You would have</h3> 
           <h3>{btcAmt.toFixed(2)} btc</h3>
-          <h3>worth ${btcAmt.toFixed(2) * currentBtcPrice} today</h3>
+          <h3>worth ${btcAmt.toFixed(2) * currentBtcPrice.toFixed(2)} today</h3>
         </div>
       </div>
       ) : (<></>)}
