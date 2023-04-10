@@ -41,8 +41,8 @@ function classNames(...classes) {
 const BitcoinRegrets = ({ btcPrice }) => {
   const [usd, setUsd] = useState()
   const [historicPrice, setHistoricPrice] = useState()
-  const [currentBtcPrice, setCurrentBtcPrice] = useState()
   const [btcAmt, setBtcAmt] = useState()
+  const [currentBtcPrice, setCurrentBtcPrice] = useState()
 
   /* set up years and months */
   const [month, setMonth] = useState()
@@ -64,10 +64,12 @@ const BitcoinRegrets = ({ btcPrice }) => {
       let historicPrice = prices.market_data.current_price.usd;
       // console.log('usd:', historicPrice, 'amt of btc could\'ve purchased: ', usd / historicPrice)
       setHistoricPrice(historicPrice)
-      setBtcAmt( usd / historicPrice )
+      if (usd) {
+        setBtcAmt( usd / historicPrice )
+      }
     }
 
-    if (usd && month && year) {
+    if (month && year) {
       console.log('all three conditions met')
 
       let monthStr = String(months.indexOf(month) + 1)
@@ -76,7 +78,14 @@ const BitcoinRegrets = ({ btcPrice }) => {
       }
       fetchData(monthStr)
     }
-  }, [usd, month, year])
+  }, [month, year])
+
+  useEffect(() => {
+    // console.log('typeof usd:', typeof Number(usd), Number(usd))
+    if (Number(usd) && historicPrice) {
+      setBtcAmt(usd / historicPrice)
+    }
+  }, [usd])
 
   const handleInputAmt = (event) => {
     event.preventDefault()
@@ -209,7 +218,7 @@ const BitcoinRegrets = ({ btcPrice }) => {
         <div className={styles.regretrospective + ' font-bold bg-black dark:bg-white text-zinc-100 dark:text-zinc-900 sm:text-6xl'}>
           <h3>You would have</h3> 
           <h3>{btcAmt.toFixed(2)} btc</h3>
-          <h3>worth ${btcAmt.toFixed(2) * currentBtcPrice.toFixed(2)} today</h3>
+          <h3>worth ${1 * (btcAmt * currentBtcPrice).toFixed(2)} today</h3>
         </div>
       </div>
       ) : (<></>)}
