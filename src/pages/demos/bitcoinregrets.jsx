@@ -13,11 +13,14 @@ import fetch from "isomorphic-unfetch";
 export async function getServerSideProps() {
   const today = Date.now(); //unix time stamp of now
   
-  /* Jan 1, 2013: 1357027200
+  /* 
+    other useful dates 
+    Jan 1, 2013: 1357027200
     Jan 1, 2022: 1641024000
   */
   const jan2013 = 1357027200
-  
+  const timeDelta = today - jan2013;
+
   const response = await fetch(`https://api.coingecko.com/api/v3/coins/bitcoin/market_chart/range?vs_currency=usd&from=${jan2013}&to=${today}`);
   const { prices } = await response.json();
 
@@ -26,7 +29,7 @@ export async function getServerSideProps() {
       x: date,
       y: price,
     })});
-  return { props: { btcPrice } };
+  return { props: { btcPrice, timeDelta } };
 }
 
 // const getUnixTime = (month,year) => {
@@ -38,7 +41,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-const BitcoinRegrets = ({ btcPrice }) => {
+const BitcoinRegrets = ({ btcPrice, timeDelta }) => {
   const [usd, setUsd] = useState()
   const [historicPrice, setHistoricPrice] = useState()
   const [btcAmt, setBtcAmt] = useState()
@@ -101,6 +104,13 @@ const BitcoinRegrets = ({ btcPrice }) => {
     setYear(year)
   }
 
+  const mouseOver = (margin, timeDelta) => (event) => {
+    if (event.nativeEvent.offsetX) {
+      // offsetX: 61, margin left: 60
+      console.log('NativeEvent: ', event.nativeEvent);
+    }
+  }
+
   const margin = { top: 20, right: 20, bottom: 30, left: 60 };
   const width = 960 - margin.left - margin.right;
   const height = 500 - margin.top - margin.bottom;
@@ -132,7 +142,7 @@ const BitcoinRegrets = ({ btcPrice }) => {
       intro="What if you bought bitcoin earlier?"
     >
     <div id="hey" className="w-full bg-white dark:text-zinc-400 dark:bg-zinc-900 dark:ring-zinc-300/20">
-      {/* { console.log('btcPrice:', btcPrice, 'line(btcPrice): ', line(btcPrice))} */}
+      { console.log('btcPrice:', btcPrice, 'line(btcPrice): ', line(btcPrice))}
       <h2 className="text-2xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-6xl">I wish I bought $<input onChange={handleInputAmt} className="w-1/6 bg-black dark:bg-white text-zinc-100 dark:text-zinc-900"></input></h2>
       <h3 className="mt-4 dark:text-zinc-100 sm:text-5xl">worth of bitcoin in {' '}
       <Menu as="div" className="relative inline-block text-left">
@@ -222,42 +232,44 @@ const BitcoinRegrets = ({ btcPrice }) => {
         </div>
       </div>
       ) : (<></>)}
-      <svg viewBox={`0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`}>
-        <g transform={`translate(${margin.left}, ${margin.top})`}>
-          <path d={line(btcPrice)} fill="none" stroke="orange" strokeWidth="2" />
-          {/* <text
-            enableBackground={true}
-            fill="#f4f4f5" //text-zinc-100
-            className={styles.regret + ' text-2xl font-bold'}
-            textAnchor='middle'
-            x={width/2}
-            y={height/2}
-          >hello world</text> */}
-          {/* <g transform={`translate(0, ${height})`}>
-            <g className="x-axis" ref={(node) => d3.select(node).call(d3.axisBottom(x).tickFormat(d3.timeFormat("%Y-%m")))} />
+      <div>
+        <svg id={styles.test} onMouseMove={mouseOver(margin, timeDelta)} viewBox={`0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`}>
+          <g transform={`translate(0, ${margin.top})`}>
+            <path d={line(btcPrice)} fill="none" stroke="orange" strokeWidth="2" />
+            {/* <text
+              enableBackground={true}
+              fill="#f4f4f5" //text-zinc-100
+              className={styles.regret + ' text-2xl font-bold'}
+              textAnchor='middle'
+              x={width/2}
+              y={height/2}
+            >hello world</text> */}
+            {/* <g transform={`translate(0, ${height})`}>
+              <g className="x-axis" ref={(node) => d3.select(node).call(d3.axisBottom(x).tickFormat(d3.timeFormat("%Y-%m")))} />
+              <text
+                x={width / 2}
+                y={margin.bottom * 0.75 + height}
+                textAnchor="middle"
+                dominantBaseline="middle"
+              >
+                Date
+              </text>
+            </g> */}
+            {/* <g className="y-axis" ref={(node) => d3.select(node).call(d3.axisLeft(y))} />
             <text
-              x={width / 2}
-              y={margin.bottom * 0.75 + height}
+              //color='red' //'rgb(161,161,170);'
+              fill='#a1a1aa'
+              x={-height / 2}
+              y={-0.85*margin.left}
               textAnchor="middle"
+              transform={`rotate(-90)`}
               dominantBaseline="middle"
             >
-              Date
-            </text>
-          </g> */}
-          {/* <g className="y-axis" ref={(node) => d3.select(node).call(d3.axisLeft(y))} />
-          <text
-            //color='red' //'rgb(161,161,170);'
-            fill='#a1a1aa'
-            x={-height / 2}
-            y={-0.85*margin.left}
-            textAnchor="middle"
-            transform={`rotate(-90)`}
-            dominantBaseline="middle"
-          >
-            Price (USD)
-          </text> */}
-        </g>
-      </svg>
+              Price (USD)
+            </text> */}
+          </g>
+        </svg>
+      </div>
     </div>
     </SimpleLayout>
   );
