@@ -14,7 +14,7 @@ const projects = [
     name: 'Bitcoin Regrets',
     description:
       'An interactive "regretrospective" experience about missing the bitcoin boat.',
-    link: { href: '/demos/bitcoinregrets', label: 'btcregrets.com' },
+    link: { href: 'https://btcregrets.com', label: 'btcregrets.com' },
     logo: logoBitcoin,
   },
   // {
