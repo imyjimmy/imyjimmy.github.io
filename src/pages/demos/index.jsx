@@ -15,6 +15,7 @@ const projects = [
     description:
       'An interactive "regretrospective" experience about missing the bitcoin boat.',
     link: { href: 'https://btcregrets.com', label: 'btcregrets.com' },
+    tech: ['React', 'd3.js', 'Tailwind'],
     logo: logoBitcoin,
   },
   // {
@@ -90,6 +91,13 @@ export default function Demos() {
                 <Card.Link href={project.link.href}>{project.name}</Card.Link>
               </h2>
               <Card.Description>{project.description}</Card.Description>
+              <div className="md-flex mt-4 w-full justify-evenly">
+                { project.tech.map((tech) => (
+                  <span className="inline-flex items-center rounded-full bg-blue-400/10 px-2 py-1 mr-2 text-xs font-medium text-blue-400 ring-1 ring-inset ring-blue-400/30">
+                  {tech}
+                </span>
+                ))}
+              </div>
               <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-blue-500 dark:text-zinc-200">
                 <LinkIcon className="h-6 w-6 flex-none" />
                 <span className="ml-2">{project.link.label}</span>
