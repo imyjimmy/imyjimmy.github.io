@@ -92,8 +92,9 @@ export default function Demos() {
               </h2>
               <Card.Description>{project.description}</Card.Description>
               <div className="md-flex mt-4 w-full justify-evenly">
-                { project.tech.map((tech) => (
-                  <span className="inline-flex items-center rounded-full bg-blue-400/10 px-2 py-1 mr-2 text-xs font-medium text-blue-400 ring-1 ring-inset ring-blue-400/30">
+                { project.tech.map((tech, index) => (
+                  <span key={index} className="inline-flex items-center rounded-full 
+                  bg-blue-50 dark:bg-blue-400/10 px-2 py-1 mr-2 text-xs font-medium text-blue-700 dark:text-blue-400 ring-1 ring-inset ring-blue-700/10 dark:ring-blue-400/30">
                   {tech}
                 </span>
                 ))}
