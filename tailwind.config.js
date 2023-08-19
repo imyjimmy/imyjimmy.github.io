@@ -66,7 +66,7 @@ module.exports = {
           '--tw-prose-th-borders': theme('colors.zinc.200'),
           '--tw-prose-td-borders': theme('colors.zinc.100'),
 
-          '--tw-prose-invert-body': theme('colors.zinc.400'),
+          '--tw-prose-invert-body': theme('colors.zinc.200'),
           '--tw-prose-invert-headings': theme('colors.zinc.200'),
           '--tw-prose-invert-links': theme('colors.blue.400'),
           '--tw-prose-invert-links-hover': theme('colors.blue.400'),
@@ -94,6 +94,7 @@ module.exports = {
             marginBottom: theme('spacing.10'),
           },
           p: {
+            fontSize: theme('fontSize.lg')[0],
             marginTop: theme('spacing.7'),
             marginBottom: theme('spacing.7'),
           },
@@ -189,6 +190,7 @@ module.exports = {
             paddingLeft: theme('spacing.6'),
           },
           li: {
+            fontSize: theme('fontSize.lg')[0],
             marginTop: theme('spacing.6'),
             marginBottom: theme('spacing.6'),
             paddingLeft: theme('spacing[3.5]'),
