@@ -17,6 +17,8 @@ function parseRawTx(rawTx) {
 
   console.log('offset vs realOffset:', offset, realOffset)
 
+// trivial commit to test known_hosts
+
   // parse inputs
   tx.inputs = [];
   for (let i = 0; i < inputCount; i++) {
