@@ -1,0 +1,37 @@
+import { BlogLayout } from '@/components/BlogLayout'
+import Image from 'next/image'
+
+export const meta = {
+  author: 'Jimmy Fan Zhang',
+  date: '2024-08-03',
+  title: "Tragedy: I want to redesign this blog",
+  description:
+    "This happens every two years or so",
+}
+
+export default (props) => <BlogLayout meta={meta} {...props} />
+
+This has been a long time coming and totally expected. Several things are outdated:
+
+## I am not a Tailwind guy--really
+But this blog is set up in tailwind. Why? I couldn't tell you. No wait, I can. It's because I found a [blog template](https://tailwindui.com/templates/spotlight) in tailwind that looks pretty good and lightly hijacked it to suit my purposes. This is great but now everything feels "locked in" and the css feels wierd to edit. Everything is an incantation--you say the right class and _viola_, you got your thing looking how you want. Feels like you're casting a spell Harry Potter style. What happened to just editing css raw like a psychopath?
+
+## The self-hosted blog format is not better than Substack
+
+Platformed vs self-hosted blogs are an interesting problem. Back in the Xanga days, everyone's blog was on it and you'd give 2 e-props (almost like digital cash!) to blog posts that resonated with you. Xanga gave you a built-in platform. Same with [Substack](https://substack.com). Same with [Dev.to](https://dev.to) and to a lesser extent, [Medium](https://medium.com)
+
+Substack gives your content a shot at being read. Dev.to gives you an audience / network of developers. Self-hosted gives me what, autonomy?
+
+## More interactive blog posts! With Data!? 🤌
+
+What if I wanted to include an interactive chart / graph with my blog post? The mdx format makes this possible but I'm totally at odds here with time--in that I have not invested enough into exploring mdx to figure out what the limits of that format actually are. Looks like this will be on my reading list: https://mdxjs.com/guides/embed/
+
+## Habits
+
+I don't post here regularly--as one can tell. I'm more of a sh*tposter on Twitter / X. Habits can change though.
+
+## Conclusion
+
+My blog is tragically under-utilized. Chronic under-utilization and desire for change has manifested itself in wanting to re-design this entire blog. Actual remedy might be to blog more.
+
+--Jimmy

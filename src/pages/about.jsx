@@ -64,7 +64,7 @@ export default function About() {
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
-                Lorem Ipsum.
+                Software developer with an 👁 for design.
               </p>
               
             </div>
